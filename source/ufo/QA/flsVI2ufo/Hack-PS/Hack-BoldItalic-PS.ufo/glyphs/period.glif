@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="period" format="1">
+  <advance width="1233"/>
+  <unicode hex="002E"/>
+  <outline>
+    <contour>
+      <point x="614" y="-42" type="curve" smooth="yes" name="dv01"/>
+      <point x="563" y="-42"/>
+      <point x="521" y="-25" name="dh01"/>
+      <point x="487" y="9" type="curve" smooth="yes"/>
+      <point x="455" y="41" name="dv02"/>
+      <point x="436" y="86"/>
+      <point x="436" y="143" type="curve" smooth="yes" name="dh02"/>
+      <point x="436" y="196"/>
+      <point x="453" y="240"/>
+      <point x="487" y="275" type="curve" smooth="yes"/>
+      <point x="521" y="309"/>
+      <point x="563" y="326"/>
+      <point x="612" y="326" type="curve" smooth="yes"/>
+      <point x="663" y="326"/>
+      <point x="705" y="309"/>
+      <point x="739" y="275" type="curve" smooth="yes"/>
+      <point x="773" y="241"/>
+      <point x="790" y="196"/>
+      <point x="790" y="141" type="curve" smooth="yes"/>
+      <point x="790" y="88"/>
+      <point x="773" y="44"/>
+      <point x="739" y="9" type="curve" smooth="yes"/>
+      <point x="705" y="-25"/>
+      <point x="663" y="-42"/>
+    </contour>
+  </outline>
+  <lib>
+  <dict>
+  <key>com.fontlab.ttprogram</key>
+  <data>
+  <ttProgram>
+    <ttc code="doubleh" point1="dh01" point2="dh02" stem="X: 320"/>
+    <ttc code="mdeltah" point="dh02" delta="-2" ppm1="9" ppm2="9"/>
+    <ttc code="doublev" point1="dv01" point2="dv02" stem="y: 260"/>
+  </ttProgram>
+  </data>
+  <key>com.adobe.type.autohint</key>
+  <data>
+  <hintSetList>
+    <hintset pointTag="dv01">
+      <hstem pos="-42" width="368" />
+      <vstem pos="436" width="354" />
+    </hintset>
+  </hintSetList>
+  </data>
+  </dict>
+  </lib>
+</glyph>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="uni23A9" format="1">
+  <advance width="1233"/>
+  <unicode hex="23A9"/>
+  <outline>
+    <contour>
+      <point x="942" y="-492" type="line" smooth="yes" name="ab01"/>
+      <point x="651" y="-492" name="dh01"/>
+      <point x="476" y="-298" name="av01"/>
+      <point x="476" y="34" type="curve" smooth="yes"/>
+      <point x="476" y="1913" type="line" name="dh02"/>
+      <point x="758" y="1913" type="line" name="sv01"/>
+      <point x="758" y="26" type="line" smooth="yes" name="sv02"/>
+      <point x="758" y="-190" name="ab02"/>
+      <point x="800" y="-220"/>
+      <point x="936" y="-220" type="curve" smooth="yes"/>
+      <point x="1217" y="-220" type="line"/>
+      <point x="1217" y="-492" type="line"/>
+    </contour>
+  </outline>
+  <lib>
+  <dict>
+  <key>com.fontlab.ttprogram</key>
+  <data>
+  <ttProgram>
+    <ttc code="doubleh" point1="dh01" point2="dh02" stem="X: 293"/>
+    <ttc code="alignv" point="av01" align="round"/>
+    <ttc code="alignb" point="ab01" zone="b: 1"/>
+    <ttc code="alignb" point="ab02" zone="b: 1"/>
+    <ttc code="singlev" point1="ab01" point2="sv01" stem="y: 260"/>
+    <ttc code="singlev" point1="sv01" point2="sv02"/>
+  </ttProgram>
+  </data>
+  <key>com.adobe.type.autohint</key>
+  <data>
+  <hintSetList>
+    <hintset pointTag="ab01">
+      <hstem pos="-492" width="272" />
+      <hstem pos="1913" width="-20" />
+      <vstem pos="476" width="282" />
+    </hintset>
+  </hintSetList>
+  </data>
+  </dict>
+  </lib>
+</glyph>

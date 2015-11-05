@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="q" format="1">
+  <advance width="1233"/>
+  <unicode hex="0071"/>
+  <outline>
+    <contour>
+      <point x="870" y="139" type="line" name="iv01"/>
+      <point x="841" y="86"/>
+      <point x="804" y="43" name="dv01"/>
+      <point x="749" y="12" type="curve" smooth="yes"/>
+      <point x="698" y="-18" name="sh01"/>
+      <point x="638" y="-33"/>
+      <point x="569" y="-33" type="curve" smooth="yes" name="at01"/>
+      <point x="442" y="-33"/>
+      <point x="333" y="16" name="sh02"/>
+      <point x="253" y="123" type="curve" smooth="yes"/>
+      <point x="182" y="218"/>
+      <point x="137" y="355" name="sh03"/>
+      <point x="137" y="551" type="curve" smooth="yes" name="ah02"/>
+      <point x="137" y="730" name="dv02"/>
+      <point x="174" y="880"/>
+      <point x="253" y="987" type="curve" smooth="yes" name="sh04"/>
+      <point x="330" y="1091"/>
+      <point x="438" y="1143" name="sv01"/>
+      <point x="570" y="1143" type="curve" smooth="yes"/>
+      <point x="638" y="1143" name="sh05"/>
+      <point x="697" y="1129"/>
+      <point x="748" y="1100" type="curve" smooth="yes"/>
+      <point x="799" y="1071" name="ah01"/>
+      <point x="839" y="1029" name="sh06"/>
+      <point x="870" y="973" type="curve"/>
+      <point x="888" y="1116" type="line"/>
+      <point x="1055" y="1116" type="line"/>
+      <point x="1055" y="-430" type="line"/>
+      <point x="870" y="-430" type="line"/>
+    </contour>
+    <contour>
+      <point x="599" y="123" type="curve" smooth="yes"/>
+      <point x="687" y="123"/>
+      <point x="755" y="158"/>
+      <point x="802" y="233" type="curve" smooth="yes"/>
+      <point x="847" y="306"/>
+      <point x="870" y="414"/>
+      <point x="870" y="555" type="curve" smooth="yes"/>
+      <point x="870" y="697"/>
+      <point x="847" y="805"/>
+      <point x="802" y="878" type="curve" smooth="yes"/>
+      <point x="755" y="953"/>
+      <point x="688" y="987"/>
+      <point x="600" y="987" type="curve" smooth="yes"/>
+      <point x="511" y="987"/>
+      <point x="445" y="951"/>
+      <point x="400" y="878" type="curve" smooth="yes"/>
+      <point x="355" y="805"/>
+      <point x="332" y="697"/>
+      <point x="332" y="555" type="curve" smooth="yes"/>
+      <point x="332" y="413"/>
+      <point x="355" y="305"/>
+      <point x="400" y="232" type="curve" smooth="yes"/>
+      <point x="445" y="159"/>
+      <point x="511" y="123"/>
+    </contour>
+  </outline>
+  <lib>
+  <dict>
+  <key>com.fontlab.ttprogram</key>
+  <data>
+  <ttProgram>
+    <ttc code="alignh" point="ah01" align="round"/>
+    <ttc code="alignh" point="ah02" align="round"/>
+    <ttc code="singleh" point1="ah01" point2="sh01" align="round"/>
+    <ttc code="singleh" point1="ah02" point2="sh02"/>
+    <ttc code="singleh" point1="ah02" point2="sh03" stem="X: 184"/>
+    <ttc code="singleh" point1="ah02" point2="sh04"/>
+    <ttc code="singleh" point1="sh01" point2="sh05" stem="X: 203"/>
+    <ttc code="mdeltah" point="sh05" delta="-2" ppm1="9" ppm2="9"/>
+    <ttc code="singleh" point1="sh03" point2="sh06" round="true"/>
+    <ttc code="alignt" point="at01" zone="t: 0"/>
+    <ttc code="alignb" point="sh03" zone="b: 2"/>
+    <ttc code="doublev" point1="dv01" point2="dv02" stem="Y: 156"/>
+    <ttc code="interpolatev" point="iv01" point1="sh03" point2="at01"/>
+    <ttc code="interpolatev" point="sh02" point1="sh03" point2="at01"/>
+    <ttc code="singlev" point1="at01" point2="sv01" stem="Y: 156"/>
+    <ttc code="mdeltav" point="sv01" delta="2" ppm1="18" ppm2="19"/>
+    <ttc code="mdeltav" point="sv01" delta="1" ppm1="9" ppm2="17"/>
+  </ttProgram>
+  </data>
+  <key>com.adobe.type.autohint</key>
+  <data>
+  <hintSetList>
+    <hintset pointTag="iv01">
+      <hstem pos="-409" width="-21" />
+      <hstem pos="-33" width="156" />
+      <hstem pos="987" width="156" />
+      <vstem pos="137" width="195" />
+      <vstem pos="870" width="185" />
+    </hintset>
+  </hintSetList>
+  </data>
+  </dict>
+  </lib>
+</glyph>

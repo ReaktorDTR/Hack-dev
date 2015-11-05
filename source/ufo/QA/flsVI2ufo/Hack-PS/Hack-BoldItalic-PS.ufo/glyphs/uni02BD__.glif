@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="uni02BD" format="1">
+  <advance width="1233"/>
+  <unicode hex="02BD"/>
+  <outline>
+    <contour>
+      <point x="704" y="1218" type="line" name="dv01"/>
+      <point x="550" y="1219" name="dh01"/>
+      <point x="473" y="1281"/>
+      <point x="473" y="1406" type="curve" smooth="yes"/>
+      <point x="473" y="1430" name="dv02"/>
+      <point x="476" y="1455"/>
+      <point x="481" y="1483" type="curve" smooth="yes"/>
+      <point x="529" y="1729" type="line" name="dh02"/>
+      <point x="803" y="1729" type="line"/>
+      <point x="755" y="1483" type="line"/>
+      <point x="634" y="1483" type="line"/>
+      <point x="631" y="1470"/>
+      <point x="630" y="1458"/>
+      <point x="630" y="1447" type="curve" smooth="yes"/>
+      <point x="630" y="1390"/>
+      <point x="664" y="1361"/>
+      <point x="732" y="1361" type="curve"/>
+    </contour>
+  </outline>
+  <lib>
+  <dict>
+  <key>com.fontlab.ttprogram</key>
+  <data>
+  <ttProgram>
+    <ttc code="doubleh" point1="dh01" point2="dh02" stem="X: 160"/>
+    <ttc code="mdeltah" point="dh02" delta="-2" ppm1="9" ppm2="20"/>
+    <ttc code="mdeltah" point="dh02" delta="-3" ppm1="21" ppm2="22"/>
+    <ttc code="doublev" point1="dv01" point2="dv02" stem="y: 260"/>
+  </ttProgram>
+  </data>
+  <key>com.adobe.type.autohint</key>
+  <data>
+  <hintSetList>
+    <hintset pointTag="dv01">
+      <hstem pos="1218" width="511" />
+      <vstem pos="473" width="157" />
+    </hintset>
+  </hintSetList>
+  </data>
+  </dict>
+  </lib>
+</glyph>

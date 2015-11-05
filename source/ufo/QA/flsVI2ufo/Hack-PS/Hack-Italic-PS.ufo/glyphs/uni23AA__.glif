@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="uni23AA" format="1">
+  <advance width="1233"/>
+  <unicode hex="23AA"/>
+  <outline>
+    <contour>
+      <point x="524" y="1932" type="line" name="dh01"/>
+      <point x="710" y="1932" type="line" name="dh02"/>
+      <point x="710" y="-524" type="line" name="av01"/>
+      <point x="524" y="-524" type="line"/>
+    </contour>
+  </outline>
+  <lib>
+  <dict>
+  <key>com.fontlab.ttprogram</key>
+  <data>
+  <ttProgram>
+    <ttc code="doubleh" point1="dh01" point2="dh02" stem="X: 194"/>
+    <ttc code="alignv" point="av01" align="round"/>
+    <ttc code="alignv" point="dh01" align="round"/>
+  </ttProgram>
+  </data>
+  <key>com.adobe.type.autohint</key>
+  <data>
+  <hintSetList>
+    <hintset pointTag="dh01">
+      <hstem pos="-503" width="-21" />
+      <hstem pos="1932" width="-20" />
+      <vstem pos="524" width="186" />
+    </hintset>
+  </hintSetList>
+  </data>
+  </dict>
+  </lib>
+</glyph>
