@@ -12,13 +12,13 @@
       <point x="634" y="486" type="line"/>
     </contour>
     <contour>
-      <point x="606" y="-60" type="curve" smooth="yes" name="dv01"/>
+      <point x="606" y="-60" type="curve" name="dv01" smooth="yes"/>
       <point x="562" y="-60"/>
       <point x="529" y="-48" name="dh01"/>
       <point x="505" y="-19" type="curve" smooth="yes"/>
       <point x="477" y="14" name="dv02"/>
       <point x="470" y="58"/>
-      <point x="470" y="89" type="curve" smooth="yes" name="dh02"/>
+      <point x="470" y="89" type="curve" name="dh02" smooth="yes"/>
       <point x="470" y="144"/>
       <point x="492" y="190"/>
       <point x="531" y="229" type="curve"/>
@@ -38,27 +38,4 @@
       <point x="659" y="-60"/>
     </contour>
   </outline>
-  <lib>
-  <dict>
-  <key>com.fontlab.ttprogram</key>
-  <data>
-  <ttProgram>
-    <ttc code="doubleh" point1="dh01" point2="dh02" stem="X: 320"/>
-    <ttc code="mdeltah" point="dh02" delta="-2" ppm1="9" ppm2="9"/>
-    <ttc code="alignt" point="at01" zone="t: 1"/>
-    <ttc code="doublev" point1="dv01" point2="dv02" round="true"/>
-  </ttProgram>
-  </data>
-  <key>com.adobe.type.autohint</key>
-  <data>
-  <hintSetList>
-    <hintset pointTag="hr00">
-      <hstem pos="-60" width="344" />
-      <hstem pos="1498" width="-20" />
-      <vstem pos="470" width="332" />
-    </hintset>
-  </hintSetList>
-  </data>
-  </dict>
-  </lib>
 </glyph>
