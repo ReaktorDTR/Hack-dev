@@ -16,27 +16,4 @@
       <point x="47" y="0" type="line"/>
     </contour>
   </outline>
-  <lib>
-  <dict>
-  <key>com.fontlab.ttprogram</key>
-  <data>
-  <ttProgram>
-    <ttc code="alignt" point="at01" zone="t: 1"/>
-    <ttc code="alignb" point="ab01" zone="b: 0"/>
-    <ttc code="doublev" point1="dv01" point2="dv02" stem="y: 260"/>
-    <ttc code="singlev" point1="at01" point2="sv01" stem="y: 260"/>
-  </ttProgram>
-  </data>
-  <key>com.adobe.type.autohint</key>
-  <data>
-  <hintSetList>
-    <hintset pointTag="at01">
-      <hstem pos="21" width="-21" />
-      <hstem pos="641" width="260" />
-      <hstem pos="1233" width="260" />
-    </hintset>
-  </hintSetList>
-  </data>
-  </dict>
-  </lib>
 </glyph>
