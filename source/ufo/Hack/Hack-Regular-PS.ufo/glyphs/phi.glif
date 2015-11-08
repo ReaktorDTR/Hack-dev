@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="phi" format="1">
+  <advance width="1233"/>
+  <unicode hex="03C6"/>
+  <outline>
+    <contour>
+      <point x="525" y="-25" type="line" name="dh03"/>
+      <point x="260" y="-25" name="dh01"/>
+      <point x="76" y="186" name="at01"/>
+      <point x="76" y="570" type="curve" smooth="yes" name="sh01"/>
+      <point x="76" y="950"/>
+      <point x="255" y="1093" name="dh02"/>
+      <point x="460" y="1128" type="curve" name="sh02"/>
+      <point x="460" y="965" type="line"/>
+      <point x="417" y="948" name="at02"/>
+      <point x="379" y="915" name="dh06"/>
+      <point x="346" y="864" type="curve" smooth="yes" name="dh04"/>
+      <point x="295" y="787" name="ab01"/>
+      <point x="270" y="688"/>
+      <point x="270" y="557" type="curve" smooth="yes" name="sh03"/>
+      <point x="270" y="272" name="dh05"/>
+      <point x="390" y="139"/>
+      <point x="525" y="139" type="curve" name="sv01"/>
+      <point x="525" y="826" type="line" smooth="yes"/>
+      <point x="525" y="1029"/>
+      <point x="612" y="1128" name="sh04"/>
+      <point x="763" y="1128" type="curve" smooth="yes"/>
+      <point x="959" y="1128"/>
+      <point x="1157" y="953"/>
+      <point x="1157" y="565" type="curve" smooth="yes"/>
+      <point x="1157" y="181"/>
+      <point x="965" y="-24"/>
+      <point x="708" y="-24" type="curve"/>
+      <point x="708" y="-426" type="line"/>
+      <point x="525" y="-426" type="line"/>
+    </contour>
+    <contour>
+      <point x="708" y="140" type="line"/>
+      <point x="831" y="140"/>
+      <point x="963" y="258"/>
+      <point x="963" y="570" type="curve" smooth="yes"/>
+      <point x="963" y="719"/>
+      <point x="933" y="814"/>
+      <point x="886" y="881" type="curve" smooth="yes"/>
+      <point x="845" y="940"/>
+      <point x="796" y="971"/>
+      <point x="767" y="971" type="curve" smooth="yes"/>
+      <point x="732" y="971"/>
+      <point x="708" y="922"/>
+      <point x="708" y="826" type="curve" smooth="yes"/>
+    </contour>
+  </outline>
+  <lib>
+  <dict>
+  <key>com.fontlab.ttprogram</key>
+  <data>
+  <ttProgram>
+    <ttc code="doubleh" point1="dh01" point2="dh02" stem="X: 203"/>
+    <ttc code="doubleh" point1="dh03" point2="dh04" stem="X: 184"/>
+    <ttc code="doubleh" point1="dh05" point2="dh06" stem="X: 203"/>
+    <ttc code="singleh" point1="dh01" point2="sh01" stem="X: 203"/>
+    <ttc code="mdeltah" point="dh02" delta="-2" ppm1="9" ppm2="9"/>
+    <ttc code="singleh" point1="dh03" point2="sh02"/>
+    <ttc code="singleh" point1="dh04" point2="sh03"/>
+    <ttc code="mdeltah" point="dh05" delta="2" ppm1="9" ppm2="9"/>
+    <ttc code="singleh" point1="dh06" point2="sh04" round="true"/>
+    <ttc code="alignt" point="at01" zone="t: 0"/>
+    <ttc code="alignt" point="at02" zone="t: 0"/>
+    <ttc code="alignb" point="ab01" zone="b: 2"/>
+    <ttc code="alignb" point="dh03" zone="b: 0"/>
+    <ttc code="alignb" point="dh04" zone="b: 0"/>
+    <ttc code="singlev" point1="dh03" point2="sh02" stem="y: 170"/>
+    <ttc code="singlev" point1="sh02" point2="sh03"/>
+    <ttc code="singlev" point1="at02" point2="sv01" stem="Y: 156"/>
+    <ttc code="mdeltav" point="sv01" delta="2" ppm1="18" ppm2="19"/>
+    <ttc code="mdeltav" point="sv01" delta="1" ppm1="9" ppm2="17"/>
+  </ttProgram>
+  </data>
+  <key>com.adobe.type.autohint</key>
+  <data>
+  <hintSetList>
+    <hintset pointTag="dh03">
+      <hstem pos="-405" width="-21" />
+      <hstem pos="-25" width="165" />
+      <hstem pos="-3" width="-21" />
+      <hstem pos="971" width="157" />
+      <vstem pos="76" width="194" />
+      <vstem pos="76" width="384" />
+      <vstem pos="525" width="183" />
+      <vstem pos="963" width="194" />
+    </hintset>
+  </hintSetList>
+  </data>
+  </dict>
+  </lib>
+</glyph>
