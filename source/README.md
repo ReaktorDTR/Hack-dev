@@ -8,7 +8,7 @@ The UFO source files on the path:
 source/ufo/Hack
 ```
 
-should be used for all work on the fonts.  The font variants are included in their own UFO sub-directories on that path.
+should be used for all work on the fonts.  The font variants are included in their own UFO sub-directories on that path.  This set of files was generated from FontLab Studio VI write to UFO source files from the v2.018 Hack PostScript .vfb source files.
 
 
 ### Source for Quality Assurance
