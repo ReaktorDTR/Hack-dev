@@ -18,45 +18,4 @@
       <point x="487" y="-322" type="line"/>
     </contour>
   </outline>
-  <lib>
-  <dict>
-  <key>com.fontlab.ttprogram</key>
-  <data>
-  <ttProgram>
-    <ttc code="alignh" point="lsb" align="round"/>
-    <ttc code="singleh" point1="lsb" point2="sh01" align="round"/>
-    <ttc code="singleh" point1="sh01" point2="sh02" round="true"/>
-    <ttc code="mdeltah" point="sh02" delta="8" ppm1="20" ppm2="20"/>
-    <ttc code="mdeltah" point="sh02" delta="-8" ppm1="23" ppm2="23"/>
-    <ttc code="mdeltah" point="sh02" delta="-8" ppm1="10" ppm2="10"/>
-    <ttc code="singleh" point1="sh01" point2="sh03" stem="X: 295"/>
-    <ttc code="singleh" point1="sh02" point2="sh04" round="true"/>
-    <ttc code="mdeltah" point="sh04" delta="8" ppm1="20" ppm2="20"/>
-    <ttc code="mdeltah" point="sh04" delta="-8" ppm1="23" ppm2="23"/>
-    <ttc code="mdeltah" point="sh04" delta="-8" ppm1="10" ppm2="10"/>
-    <ttc code="singleh" point1="sh04" point2="sh05" stem="X: 295"/>
-    <ttc code="singleh" point1="sh02" point2="sh06" stem="X: 236"/>
-    <ttc code="singleh" point1="sh05" point2="rsb" round="true"/>
-    <ttc code="alignv" point="av01" align="round"/>
-    <ttc code="alignt" point="at01" zone="t: 1"/>
-    <ttc code="alignt" point="at02" zone="t: 1"/>
-    <ttc code="alignb" point="sh02" zone="b: 0"/>
-    <ttc code="alignb" point="sh05" zone="b: 0"/>
-    <ttc code="singlev" point1="sh02" point2="sh03" stem="y: 260"/>
-    <ttc code="singlev" point1="sh03" point2="sh04"/>
-  </ttProgram>
-  </data>
-  <key>com.adobe.type.autohint</key>
-  <data>
-  <hintSetList>
-    <hintset pointTag="sh02">
-      <hstem pos="-301" width="-21" />
-      <hstem pos="0" width="260" />
-      <hstem pos="1493" width="-20" />
-      <vstem3 stem3List="137,295,487,259,801,295" />
-    </hintset>
-  </hintSetList>
-  </data>
-  </dict>
-  </lib>
 </glyph>

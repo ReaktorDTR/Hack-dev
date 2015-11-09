@@ -10,13 +10,13 @@
       <point x="440" y="1347" type="line"/>
     </contour>
     <contour>
-      <point x="404" y="-29" type="curve" smooth="yes" name="sv03"/>
+      <point x="404" y="-29" type="curve" name="sv03" smooth="yes"/>
       <point x="203" y="-29" name="sh01"/>
       <point x="72" y="90"/>
-      <point x="72" y="283" type="curve" smooth="yes" name="dv02"/>
+      <point x="72" y="283" type="curve" name="dv02" smooth="yes"/>
       <point x="72" y="534" name="sh02"/>
       <point x="293" y="707" name="ah02"/>
-      <point x="645" y="707" type="curve" smooth="yes" name="sv04"/>
+      <point x="645" y="707" type="curve" name="sv04" smooth="yes"/>
       <point x="891" y="707" type="line" name="sh04"/>
       <point x="903" y="768" type="line" smooth="yes"/>
       <point x="906" y="780" name="at02"/>
@@ -24,17 +24,17 @@
       <point x="907" y="807" type="curve" smooth="yes"/>
       <point x="907" y="932" name="ab01"/>
       <point x="821" y="991"/>
-      <point x="665" y="991" type="curve" smooth="yes" name="ih01"/>
+      <point x="665" y="991" type="curve" name="ih01" smooth="yes"/>
       <point x="548" y="991"/>
       <point x="416" y="957" name="sv02"/>
       <point x="268" y="889" type="curve"/>
       <point x="303" y="1069" type="line" name="dv01"/>
       <point x="448" y="1121"/>
       <point x="574" y="1147"/>
-      <point x="693" y="1147" type="curve" smooth="yes" name="sh03"/>
+      <point x="693" y="1147" type="curve" name="sh03" smooth="yes"/>
       <point x="942" y="1147"/>
       <point x="1087" y="1030" name="ah01"/>
-      <point x="1087" y="839" type="curve" smooth="yes" name="sh06"/>
+      <point x="1087" y="839" type="curve" name="sh06" smooth="yes"/>
       <point x="1087" y="794"/>
       <point x="1079" y="723"/>
       <point x="1063" y="639" type="curve" smooth="yes"/>
@@ -61,52 +61,4 @@
       <point x="334" y="125"/>
     </contour>
   </outline>
-  <lib>
-  <dict>
-  <key>com.fontlab.ttprogram</key>
-  <data>
-  <ttProgram>
-    <ttc code="alignh" point="ah01" align="round"/>
-    <ttc code="alignh" point="ah02" align="round"/>
-    <ttc code="singleh" point1="ah01" point2="sh01" align="round"/>
-    <ttc code="mdeltah" point="ah02" delta="2" ppm1="9" ppm2="9"/>
-    <ttc code="singleh" point1="ah02" point2="sh02" align="round"/>
-    <ttc code="singleh" point1="sh01" point2="sh03" stem="X: 194"/>
-    <ttc code="mdeltah" point="sh03" delta="-2" ppm1="9" ppm2="16"/>
-    <ttc code="mdeltah" point="sh03" delta="-3" ppm1="17" ppm2="18"/>
-    <ttc code="singleh" point1="sh03" point2="sh04" align="round"/>
-    <ttc code="singleh" point1="ah02" point2="sh05" stem="X: 174"/>
-    <ttc code="interpolateh" point="ih01" point1="sh01" point2="sh05"/>
-    <ttc code="singleh" point1="sh05" point2="sh06" round="true"/>
-    <ttc code="alignt" point="at01" zone="t: 1"/>
-    <ttc code="alignt" point="at02" zone="t: 0"/>
-    <ttc code="alignb" point="ab01" zone="b: 0"/>
-    <ttc code="doublev" point1="dv01" point2="dv02" stem="y: 143"/>
-    <ttc code="singlev" point1="at01" point2="sv01" stem="y: 143"/>
-    <ttc code="singlev" point1="ab01" point2="sv02" stem="y: 143"/>
-    <ttc code="mdeltav" point="sv02" delta="-1" ppm1="9" ppm2="9"/>
-    <ttc code="singlev" point1="sv02" point2="sv03" stem="Y: 156"/>
-    <ttc code="singlev" point1="at02" point2="sv04" stem="Y: 156"/>
-    <ttc code="mdeltav" point="sv04" delta="2" ppm1="17" ppm2="18"/>
-    <ttc code="mdeltav" point="sv04" delta="1" ppm1="9" ppm2="16"/>
-    <ttc code="interpolatev" point="sh04" point1="ab01" point2="at01"/>
-    <ttc code="interpolatev" point="ih01" point1="ab01" point2="at01"/>
-  </ttProgram>
-  </data>
-  <key>com.adobe.type.autohint</key>
-  <data>
-  <hintSetList>
-    <hintset pointTag="at01">
-      <hstem pos="-29" width="154" />
-      <hstem pos="0" width="125" />
-      <hstem pos="563" width="144" />
-      <hstem pos="991" width="156" />
-      <hstem pos="1347" width="148" />
-      <vstem pos="72" width="192" />
-      <vstem pos="907" width="180" />
-    </hintset>
-  </hintSetList>
-  </data>
-  </dict>
-  </lib>
 </glyph>

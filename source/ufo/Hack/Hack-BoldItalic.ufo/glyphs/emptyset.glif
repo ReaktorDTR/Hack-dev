@@ -8,7 +8,7 @@
       <point x="183" y="327" type="line"/>
       <point x="130" y="396" name="sh01"/>
       <point x="80" y="497"/>
-      <point x="80" y="642" type="curve" smooth="yes" name="av01"/>
+      <point x="80" y="642" type="curve" name="av01" smooth="yes"/>
       <point x="80" y="791"/>
       <point x="132" y="918" name="av02"/>
       <point x="237" y="1023" type="curve" smooth="yes"/>
@@ -78,41 +78,4 @@
       <point x="566" y="278"/>
     </contour>
   </outline>
-  <lib>
-  <dict>
-  <key>com.fontlab.ttprogram</key>
-  <data>
-  <ttProgram>
-    <ttc code="alignh" point="ah01" align="round"/>
-    <ttc code="alignh" point="ah02" align="round"/>
-    <ttc code="singleh" point1="ah01" point2="sh01" align="round"/>
-    <ttc code="mdeltah" point="ah02" delta="3" ppm1="21" ppm2="22"/>
-    <ttc code="mdeltah" point="ah02" delta="2" ppm1="9" ppm2="20"/>
-    <ttc code="singleh" point1="ah02" point2="sh02" stem="X: 160"/>
-    <ttc code="singleh" point1="sh01" point2="sh03" stem="X: 160"/>
-    <ttc code="mdeltah" point="sh03" delta="-2" ppm1="9" ppm2="20"/>
-    <ttc code="mdeltah" point="sh03" delta="-3" ppm1="21" ppm2="22"/>
-    <ttc code="singleh" point1="sh02" point2="sh04" round="true"/>
-    <ttc code="alignv" point="av01" align="round"/>
-    <ttc code="alignv" point="av02" align="round"/>
-    <ttc code="alignv" point="av03" align="round"/>
-    <ttc code="doublev" point1="dv01" point2="dv02" stem="Y: 172"/>
-    <ttc code="singlev" point1="av01" point2="sv01" stem="Y: 172"/>
-  </ttProgram>
-  </data>
-  <key>com.adobe.type.autohint</key>
-  <data>
-  <hintSetList>
-    <hintset pointTag="hr00">
-      <hstem pos="110" width="-21" />
-      <hstem pos="106" width="172" />
-      <hstem pos="1009" width="173" />
-      <hstem pos="1196" width="-20" />
-      <vstem pos="80" width="172" />
-      <vstem pos="981" width="172" />
-    </hintset>
-  </hintSetList>
-  </data>
-  </dict>
-  </lib>
 </glyph>

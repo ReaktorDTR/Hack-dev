@@ -55,26 +55,4 @@
       <point x="86" y="-114" type="curve"/>
     </contour>
   </outline>
-  <lib>
-  <dict>
-  <key>com.fontlab.ttprogram</key>
-  <data>
-  <ttProgram>
-    <ttc code="alignv" point="av01" align="round"/>
-    <ttc code="doublev" point1="dv01" point2="dv02" stem="y: 170"/>
-    <ttc code="doublev" point1="dv03" point2="dv04" stem="y: 170"/>
-  </ttProgram>
-  </data>
-  <key>com.adobe.type.autohint</key>
-  <data>
-  <hintSetList>
-    <hintset pointTag="hr00">
-      <hstem pos="-114" width="166" />
-      <hstem pos="9" width="166" />
-      <hstem pos="1457" width="-20" />
-    </hintset>
-  </hintSetList>
-  </data>
-  </dict>
-  </lib>
 </glyph>

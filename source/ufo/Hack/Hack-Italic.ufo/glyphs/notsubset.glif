@@ -8,13 +8,13 @@
       <point x="379" y="198" type="line"/>
       <point x="323" y="221"/>
       <point x="274" y="254" name="dh01"/>
-      <point x="227" y="302" type="curve" smooth="yes" name="at01"/>
+      <point x="227" y="302" type="curve" name="at01" smooth="yes"/>
       <point x="136" y="394"/>
       <point x="88" y="504" name="av02"/>
       <point x="88" y="636" type="curve" smooth="yes"/>
       <point x="88" y="908" name="at02"/>
       <point x="298" y="1119"/>
-      <point x="565" y="1119" type="curve" smooth="yes" name="sv01"/>
+      <point x="565" y="1119" type="curve" name="sv01" smooth="yes"/>
       <point x="691" y="1119" type="line"/>
       <point x="766" y="1342" type="line"/>
       <point x="927" y="1289" type="line" name="dv02"/>
@@ -43,37 +43,4 @@
       <point x="427" y="342" type="curve"/>
     </contour>
   </outline>
-  <lib>
-  <dict>
-  <key>com.fontlab.ttprogram</key>
-  <data>
-  <ttProgram>
-    <ttc code="doubleh" point1="dh01" point2="dh02" stem="X: 160"/>
-    <ttc code="mdeltah" point="dh02" delta="-2" ppm1="9" ppm2="16"/>
-    <ttc code="mdeltah" point="dh02" delta="-3" ppm1="17" ppm2="18"/>
-    <ttc code="alignv" point="av01" align="round"/>
-    <ttc code="alignv" point="av02" align="round"/>
-    <ttc code="alignt" point="at01" zone="t: 0"/>
-    <ttc code="alignt" point="at02" zone="t: 0"/>
-    <ttc code="doublev" point1="dv01" point2="dv02" stem="Y: 156"/>
-    <ttc code="singlev" point1="at02" point2="sv01" stem="Y: 156"/>
-    <ttc code="singlev" point1="dv01" point2="sv02"/>
-    <ttc code="singlev" point1="sv01" point2="sv03"/>
-    <ttc code="singlev" point1="sv03" point2="sv04"/>
-  </ttProgram>
-  </data>
-  <key>com.adobe.type.autohint</key>
-  <data>
-  <hintSetList>
-    <hintset pointTag="hr00">
-      <hstem pos="-39" width="-21" />
-      <hstem pos="163" width="150" />
-      <hstem pos="969" width="150" />
-      <hstem pos="1342" width="-20" />
-      <vstem pos="88" width="150" />
-    </hintset>
-  </hintSetList>
-  </data>
-  </dict>
-  </lib>
 </glyph>

@@ -28,36 +28,4 @@
       <point x="456" y="-402" type="line"/>
     </contour>
   </outline>
-  <lib>
-  <dict>
-  <key>com.fontlab.ttprogram</key>
-  <data>
-  <ttProgram>
-    <ttc code="doubleh" point1="dh01" point2="dh02" stem="X: 320"/>
-    <ttc code="singleh" point1="dh01" point2="sh01"/>
-    <ttc code="singleh" point1="dh02" point2="sh02"/>
-    <ttc code="singleh" point1="dh01" point2="sh03"/>
-    <ttc code="singleh" point1="dh02" point2="sh04"/>
-    <ttc code="singleh" point1="dh01" point2="sh05"/>
-    <ttc code="singleh" point1="dh02" point2="sh06"/>
-    <ttc code="doublev" point1="dv01" point2="sh06" round="true"/>
-    <ttc code="doublev" point1="dv02" point2="dh02" round="true"/>
-    <ttc code="doublev" point1="dv03" point2="sh04" round="true"/>
-    <ttc code="doublev" point1="dv04" point2="sh02" round="true"/>
-  </ttProgram>
-  </data>
-  <key>com.adobe.type.autohint</key>
-  <data>
-  <hintSetList>
-    <hintset pointTag="dh01">
-      <hstem pos="-402" width="418" />
-      <hstem pos="196" width="418" />
-      <hstem pos="794" width="418" />
-      <hstem pos="1392" width="418" />
-      <vstem pos="456" width="320" />
-    </hintset>
-  </hintSetList>
-  </data>
-  </dict>
-  </lib>
 </glyph>

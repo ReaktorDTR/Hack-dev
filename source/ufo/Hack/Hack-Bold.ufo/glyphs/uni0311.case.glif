@@ -6,7 +6,7 @@
       <point x="-952" y="1635" type="line" name="sv01"/>
       <point x="-932" y="1808" name="dv02"/>
       <point x="-814" y="1899"/>
-      <point x="-617" y="1899" type="curve" smooth="yes" name="dv01"/>
+      <point x="-617" y="1899" type="curve" name="dv01" smooth="yes"/>
       <point x="-418" y="1899" name="sv02"/>
       <point x="-301" y="1808" name="sv03"/>
       <point x="-281" y="1635" type="curve"/>
@@ -19,26 +19,4 @@
       <point x="-811" y="1635" type="curve"/>
     </contour>
   </outline>
-  <lib>
-  <dict>
-  <key>com.fontlab.ttprogram</key>
-  <data>
-  <ttProgram>
-    <ttc code="doublev" point1="dv01" point2="dv02" stem="y: 260"/>
-    <ttc code="singlev" point1="dv01" point2="sv01"/>
-    <ttc code="singlev" point1="dv02" point2="sv02" stem="Y: 172"/>
-    <ttc code="singlev" point1="dv01" point2="sv03"/>
-  </ttProgram>
-  </data>
-  <key>com.adobe.type.autohint</key>
-  <data>
-  <hintSetList>
-    <hintset pointTag="sv01">
-      <hstem pos="1635" width="264" />
-      <hstem pos="1756" width="143" />
-    </hintset>
-  </hintSetList>
-  </data>
-  </dict>
-  </lib>
 </glyph>

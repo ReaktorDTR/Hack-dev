@@ -19,19 +19,19 @@
       <point x="51" y="504" type="line"/>
     </contour>
     <contour>
-      <point x="817" y="-286" type="curve" smooth="yes" name="dv01"/>
+      <point x="817" y="-286" type="curve" name="dv01" smooth="yes"/>
       <point x="629" y="-286"/>
       <point x="516" y="-196" name="ih01"/>
-      <point x="516" y="-47" type="curve" smooth="yes" name="sh03"/>
+      <point x="516" y="-47" type="curve" name="sh03" smooth="yes"/>
       <point x="516" y="74" name="dv08"/>
       <point x="583" y="149"/>
       <point x="708" y="174" type="curve" name="ih02"/>
       <point x="600" y="198" name="sh01"/>
       <point x="538" y="268"/>
-      <point x="538" y="364" type="curve" smooth="yes" name="dv06"/>
+      <point x="538" y="364" type="curve" name="dv06" smooth="yes"/>
       <point x="538" y="496" name="ah02"/>
       <point x="645" y="580" name="dv07"/>
-      <point x="817" y="580" type="curve" smooth="yes" name="sh04"/>
+      <point x="817" y="580" type="curve" name="sh04" smooth="yes"/>
       <point x="990" y="580"/>
       <point x="1097" y="496" name="dv02"/>
       <point x="1097" y="364" type="curve" smooth="yes"/>
@@ -73,45 +73,4 @@
       <point x="708" y="-198"/>
     </contour>
   </outline>
-  <lib>
-  <dict>
-  <key>com.fontlab.ttprogram</key>
-  <data>
-  <ttProgram>
-    <ttc code="alignh" point="ah01" align="round"/>
-    <ttc code="alignh" point="ah02" align="round"/>
-    <ttc code="mdeltah" point="ah02" delta="3" ppm1="18" ppm2="19"/>
-    <ttc code="mdeltah" point="ah02" delta="2" ppm1="9" ppm2="17"/>
-    <ttc code="singleh" point1="ah02" point2="sh01" stem="X: 160"/>
-    <ttc code="singleh" point1="sh01" point2="sh02" align="round"/>
-    <ttc code="singleh" point1="ah01" point2="sh03" align="round"/>
-    <ttc code="interpolateh" point="ih01" point1="sh03" point2="sh01"/>
-    <ttc code="interpolateh" point="ih02" point1="sh03" point2="sh01"/>
-    <ttc code="singleh" point1="sh03" point2="sh04" stem="X: 160"/>
-    <ttc code="mdeltah" point="sh04" delta="-2" ppm1="9" ppm2="17"/>
-    <ttc code="mdeltah" point="sh04" delta="-3" ppm1="18" ppm2="19"/>
-    <ttc code="singleh" point1="sh01" point2="sh05" round="true"/>
-    <ttc code="doublev" point1="dv01" point2="dv02" stem="y: 143"/>
-    <ttc code="doublev" point1="dv03" point2="dv04" stem="y: 143"/>
-    <ttc code="doublev" point1="dv05" point2="dv06" stem="y: 143"/>
-    <ttc code="doublev" point1="dv07" point2="dv08" stem="y: 143"/>
-    <ttc code="interpolatev" point="ih01" point1="dv05" point2="dv06"/>
-    <ttc code="interpolatev" point="ih02" point1="dv05" point2="dv06"/>
-  </ttProgram>
-  </data>
-  <key>com.adobe.type.autohint</key>
-  <data>
-  <hintSetList>
-    <hintset pointTag="dv03">
-      <hstem pos="-286" width="88" />
-      <hstem pos="127" width="88" />
-      <hstem pos="493" width="87" />
-      <hstem pos="1564" width="95" />
-      <vstem pos="538" width="104" />
-      <vstem pos="993" width="126" />
-    </hintset>
-  </hintSetList>
-  </data>
-  </dict>
-  </lib>
 </glyph>

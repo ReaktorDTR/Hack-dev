@@ -4,7 +4,7 @@
   <unicode hex="2022"/>
   <outline>
     <contour>
-      <point x="614" y="399" type="curve" smooth="yes" name="av01"/>
+      <point x="614" y="399" type="curve" name="av01" smooth="yes"/>
       <point x="566" y="399"/>
       <point x="520" y="408"/>
       <point x="476" y="427" type="curve" smooth="yes"/>
@@ -54,24 +54,4 @@
       <point x="669" y="399"/>
     </contour>
   </outline>
-  <lib>
-  <dict>
-  <key>com.fontlab.ttprogram</key>
-  <data>
-  <ttProgram>
-    <ttc code="alignv" point="av01" align="round"/>
-    <ttc code="alignt" point="at01" zone="t: 0"/>
-  </ttProgram>
-  </data>
-  <key>com.adobe.type.autohint</key>
-  <data>
-  <hintSetList>
-    <hintset pointTag="av01">
-      <hstem pos="420" width="-21" />
-      <hstem pos="1120" width="-20" />
-    </hintset>
-  </hintSetList>
-  </data>
-  </dict>
-  </lib>
 </glyph>

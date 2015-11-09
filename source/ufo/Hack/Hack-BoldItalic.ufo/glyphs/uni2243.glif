@@ -4,11 +4,11 @@
   <unicode hex="2243"/>
   <outline>
     <contour>
-      <point x="850" y="672" type="curve" smooth="yes" name="dv03"/>
+      <point x="850" y="672" type="curve" name="dv03" smooth="yes"/>
       <point x="778" y="672"/>
       <point x="726" y="688"/>
-      <point x="645" y="723" type="curve" smooth="yes" name="sv01"/>
-      <point x="612" y="737" type="line" smooth="yes" name="iv01"/>
+      <point x="645" y="723" type="curve" name="sv01" smooth="yes"/>
+      <point x="612" y="737" type="line" name="iv01" smooth="yes"/>
       <point x="522" y="774"/>
       <point x="468" y="795" name="av01"/>
       <point x="385" y="795" type="curve" smooth="yes"/>
@@ -41,30 +41,4 @@
       <point x="88" y="295" type="line"/>
     </contour>
   </outline>
-  <lib>
-  <dict>
-  <key>com.fontlab.ttprogram</key>
-  <data>
-  <ttProgram>
-    <ttc code="alignv" point="av01" align="round"/>
-    <ttc code="alignv" point="av02" align="round"/>
-    <ttc code="doublev" point1="dv01" point2="dv02" stem="y: 225"/>
-    <ttc code="doublev" point1="dv03" point2="dv04" stem="y: 225"/>
-    <ttc code="singlev" point1="av01" point2="sv01" stem="y: 225"/>
-    <ttc code="interpolatev" point="iv01" point1="dv03" point2="dv04"/>
-  </ttProgram>
-  </data>
-  <key>com.adobe.type.autohint</key>
-  <data>
-  <hintSetList>
-    <hintset pointTag="dv03">
-      <hstem pos="295" width="237" />
-      <hstem pos="672" width="223" />
-      <hstem pos="795" width="223" />
-      <hstem pos="1020" width="-20" />
-    </hintset>
-  </hintSetList>
-  </data>
-  </dict>
-  </lib>
 </glyph>

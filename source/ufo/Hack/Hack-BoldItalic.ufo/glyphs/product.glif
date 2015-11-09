@@ -14,34 +14,4 @@
       <point x="152" y="-436" type="line"/>
     </contour>
   </outline>
-  <lib>
-  <dict>
-  <key>com.fontlab.ttprogram</key>
-  <data>
-  <ttProgram>
-    <ttc code="alignh" point="lsb" align="round"/>
-    <ttc code="alignh" point="ah01" align="round"/>
-    <ttc code="singleh" point1="lsb" point2="sh01" align="round"/>
-    <ttc code="singleh" point1="ah01" point2="sh02" stem="X: 256"/>
-    <ttc code="singleh" point1="sh01" point2="sh03" stem="X: 256"/>
-    <ttc code="singleh" point1="sh02" point2="rsb" round="true"/>
-    <ttc code="alignv" point="sh02" align="round"/>
-    <ttc code="alignv" point="av01" align="round"/>
-    <ttc code="alignt" point="sh01" zone="t: 1"/>
-    <ttc code="singlev" point1="sh01" point2="sv01" stem="y: 225"/>
-  </ttProgram>
-  </data>
-  <key>com.adobe.type.autohint</key>
-  <data>
-  <hintSetList>
-    <hintset pointTag="sh01">
-      <hstem pos="-415" width="-21" />
-      <hstem pos="1311" width="207" />
-      <vstem pos="152" width="256" />
-      <vstem pos="825" width="256" />
-    </hintset>
-  </hintSetList>
-  </data>
-  </dict>
-  </lib>
 </glyph>

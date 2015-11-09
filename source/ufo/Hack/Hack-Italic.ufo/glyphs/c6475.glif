@@ -3,10 +3,10 @@
   <advance width="1233"/>
   <outline>
     <contour>
-      <point x="731" y="1286" type="curve" smooth="yes" name="dv01"/>
+      <point x="731" y="1286" type="curve" name="dv01" smooth="yes"/>
       <point x="651" y="1286"/>
       <point x="588" y="1306"/>
-      <point x="541" y="1347" type="curve" smooth="yes" name="sv01"/>
+      <point x="541" y="1347" type="curve" name="sv01" smooth="yes"/>
       <point x="497" y="1386"/>
       <point x="466" y="1440" name="dv02"/>
       <point x="451" y="1528" type="curve"/>
@@ -31,25 +31,4 @@
       <point x="816" y="1286"/>
     </contour>
   </outline>
-  <lib>
-  <dict>
-  <key>com.fontlab.ttprogram</key>
-  <data>
-  <ttProgram>
-    <ttc code="doublev" point1="dv01" point2="dv02" stem="y: 143"/>
-    <ttc code="singlev" point1="dv01" point2="sv01" stem="y: 170"/>
-    <ttc code="singlev" point1="sv01" point2="sv02"/>
-  </ttProgram>
-  </data>
-  <key>com.adobe.type.autohint</key>
-  <data>
-  <hintSetList>
-    <hintset pointTag="dv01">
-      <hstem pos="1286" width="127" />
-      <hstem pos="1286" width="242" />
-    </hintset>
-  </hintSetList>
-  </data>
-  </dict>
-  </lib>
 </glyph>

@@ -22,40 +22,4 @@
       <point x="430" y="-464" type="line" name="ih02"/>
     </contour>
   </outline>
-  <lib>
-  <dict>
-  <key>com.fontlab.ttprogram</key>
-  <data>
-  <ttProgram>
-    <ttc code="alignh" point="lsb" align="round"/>
-    <ttc code="alignh" point="ah01" align="round"/>
-    <ttc code="singleh" point1="lsb" point2="sh01" align="round"/>
-    <ttc code="singleh" point1="ah01" point2="sh02" stem="X: 236"/>
-    <ttc code="singleh" point1="sh01" point2="sh03" stem="X: 236"/>
-    <ttc code="interpolateh" point="ih01" point1="sh01" point2="sh02"/>
-    <ttc code="interpolateh" point="ih02" point1="sh01" point2="sh02"/>
-    <ttc code="singleh" point1="sh02" point2="rsb" round="true"/>
-    <ttc code="alignt" point="sh01" zone="t: 1"/>
-    <ttc code="alignt" point="at01" zone="t: 1"/>
-    <ttc code="alignb" point="sh02" zone="b: 0"/>
-    <ttc code="alignb" point="ab01" zone="b: 0"/>
-    <ttc code="doublev" point1="ih02" point2="dv01" stem="y: 260"/>
-    <ttc code="interpolatev" point="ah01" point1="sh02" point2="sh01"/>
-    <ttc code="interpolatev" point="sh03" point1="sh02" point2="sh01"/>
-  </ttProgram>
-  </data>
-  <key>com.adobe.type.autohint</key>
-  <data>
-  <hintSetList>
-    <hintset pointTag="sh01">
-      <hstem pos="-464" width="306" />
-      <hstem pos="21" width="-21" />
-      <hstem pos="1493" width="-20" />
-      <vstem pos="119" width="260" />
-      <vstem pos="852" width="260" />
-    </hintset>
-  </hintSetList>
-  </data>
-  </dict>
-  </lib>
 </glyph>

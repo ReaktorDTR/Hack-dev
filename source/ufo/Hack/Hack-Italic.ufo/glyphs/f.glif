@@ -32,32 +32,4 @@
       <point x="333" y="0" type="line"/>
     </contour>
   </outline>
-  <lib>
-  <dict>
-  <key>com.fontlab.ttprogram</key>
-  <data>
-  <ttProgram>
-    <ttc code="alignt" point="at01" zone="t: 2"/>
-    <ttc code="alignt" point="at02" zone="t: 0"/>
-    <ttc code="alignt" point="at03" zone="t: 0"/>
-    <ttc code="alignb" point="ab01" zone="b: 0"/>
-    <ttc code="singlev" point1="at03" point2="sv01" stem="y: 143"/>
-    <ttc code="singlev" point1="sv01" point2="sv02"/>
-    <ttc code="singlev" point1="at01" point2="sv03" stem="Y: 156"/>
-    <ttc code="singlev" point1="sv02" point2="sv04"/>
-    <ttc code="singlev" point1="sv04" point2="sv05"/>
-  </ttProgram>
-  </data>
-  <key>com.adobe.type.autohint</key>
-  <data>
-  <hintSetList>
-    <hintset pointTag="sv01">
-      <hstem pos="21" width="-21" />
-      <hstem pos="977" width="143" />
-      <hstem pos="1403" width="153" />
-    </hintset>
-  </hintSetList>
-  </data>
-  </dict>
-  </lib>
 </glyph>

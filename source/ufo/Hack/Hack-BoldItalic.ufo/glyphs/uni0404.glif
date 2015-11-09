@@ -4,16 +4,16 @@
   <unicode hex="0404"/>
   <outline>
     <contour>
-      <point x="591" y="-29" type="curve" smooth="yes" name="dv01"/>
+      <point x="591" y="-29" type="curve" name="dv01" smooth="yes"/>
       <point x="193" y="-29" name="dh01"/>
       <point x="99" y="236"/>
-      <point x="99" y="478" type="curve" smooth="yes" name="at01"/>
+      <point x="99" y="478" type="curve" name="at01" smooth="yes"/>
       <point x="99" y="554"/>
       <point x="107" y="650"/>
       <point x="126" y="746" type="curve" name="sv01"/>
       <point x="217" y="1237"/>
       <point x="497" y="1520" name="dv04"/>
-      <point x="897" y="1520" type="curve" smooth="yes" name="dv03"/>
+      <point x="897" y="1520" type="curve" name="dv03" smooth="yes"/>
       <point x="1013" y="1520" name="sh01"/>
       <point x="1112" y="1496" name="dh02"/>
       <point x="1193" y="1448" type="curve" name="dv02"/>
@@ -41,32 +41,4 @@
       <point x="712" y="-29"/>
     </contour>
   </outline>
-  <lib>
-  <dict>
-  <key>com.fontlab.ttprogram</key>
-  <data>
-  <ttProgram>
-    <ttc code="doubleh" point1="dh01" point2="dh02" stem="X: 320"/>
-    <ttc code="mdeltah" point="dh02" delta="-2" ppm1="9" ppm2="9"/>
-    <ttc code="singleh" point1="dh02" point2="sh01" align="round"/>
-    <ttc code="alignt" point="at01" zone="t: 1"/>
-    <ttc code="doublev" point1="dv01" point2="dv02" stem="y: 260"/>
-    <ttc code="doublev" point1="dv03" point2="dv04" stem="y: 260"/>
-    <ttc code="singlev" point1="at01" point2="sv01" stem="y: 260"/>
-    <ttc code="mdeltav" point="sv01" delta="1" ppm1="9" ppm2="9"/>
-  </ttProgram>
-  </data>
-  <key>com.adobe.type.autohint</key>
-  <data>
-  <hintSetList>
-    <hintset pointTag="dv01">
-      <hstem pos="-29" width="265" />
-      <hstem pos="615" width="260" />
-      <hstem pos="1255" width="265" />
-      <vstem pos="99" width="314" />
-    </hintset>
-  </hintSetList>
-  </data>
-  </dict>
-  </lib>
 </glyph>

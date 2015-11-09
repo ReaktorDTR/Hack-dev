@@ -9,10 +9,10 @@
       <point x="459" y="952" type="line" name="sh02"/>
       <point x="502" y="1081" name="at01"/>
       <point x="606" y="1147"/>
-      <point x="749" y="1147" type="curve" smooth="yes" name="sh03"/>
+      <point x="749" y="1147" type="curve" name="sh03" smooth="yes"/>
       <point x="957" y="1147" name="ah02"/>
       <point x="1067" y="1008"/>
-      <point x="1067" y="727" type="curve" smooth="yes" name="sv01"/>
+      <point x="1067" y="727" type="curve" name="sv01" smooth="yes"/>
       <point x="1067" y="0" type="line" name="sh04"/>
       <point x="776" y="0" type="line" name="ab01"/>
       <point x="776" y="682" type="line" smooth="yes"/>
@@ -26,39 +26,4 @@
       <point x="168" y="0" type="line"/>
     </contour>
   </outline>
-  <lib>
-  <dict>
-  <key>com.fontlab.ttprogram</key>
-  <data>
-  <ttProgram>
-    <ttc code="alignh" point="ah01" align="round"/>
-    <ttc code="alignh" point="ah02" align="round"/>
-    <ttc code="singleh" point1="ah01" point2="sh01" align="round"/>
-    <ttc code="singleh" point1="sh01" point2="sh02" stem="X: 293"/>
-    <ttc code="singleh" point1="ah02" point2="sh03" stem="X: 293"/>
-    <ttc code="singleh" point1="sh02" point2="sh04"/>
-    <ttc code="singleh" point1="sh03" point2="sh05" round="true"/>
-    <ttc code="alignt" point="sh01" zone="t: 0"/>
-    <ttc code="alignt" point="at01" zone="t: 0"/>
-    <ttc code="alignb" point="sh03" zone="b: 0"/>
-    <ttc code="alignb" point="ab01" zone="b: 0"/>
-    <ttc code="singlev" point1="sh01" point2="sv01" stem="y: 225"/>
-    <ttc code="mdeltav" point="sv01" delta="1" ppm1="9" ppm2="9"/>
-    <ttc code="interpolatev" point="sh02" point1="sh01" point2="sv01"/>
-  </ttProgram>
-  </data>
-  <key>com.adobe.type.autohint</key>
-  <data>
-  <hintSetList>
-    <hintset pointTag="sh01">
-      <hstem pos="21" width="-21" />
-      <hstem pos="909" width="211" />
-      <hstem pos="909" width="238" />
-      <vstem pos="168" width="291" />
-      <vstem pos="776" width="291" />
-    </hintset>
-  </hintSetList>
-  </data>
-  </dict>
-  </lib>
 </glyph>

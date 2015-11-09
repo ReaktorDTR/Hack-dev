@@ -4,7 +4,7 @@
   <unicode hex="0576"/>
   <outline>
     <contour>
-      <point x="549" y="-27" type="curve" smooth="yes" name="ab01"/>
+      <point x="549" y="-27" type="curve" name="ab01" smooth="yes"/>
       <point x="340" y="-27" name="sh01"/>
       <point x="231" y="110" name="sv01"/>
       <point x="231" y="393" type="curve" smooth="yes"/>
@@ -12,10 +12,10 @@
       <point x="103" y="1331" type="line" name="dh02"/>
       <point x="103" y="1556" type="line"/>
       <point x="522" y="1556" type="line" name="sv02"/>
-      <point x="522" y="438" type="line" smooth="yes" name="sh02"/>
+      <point x="522" y="438" type="line" name="sh02" smooth="yes"/>
       <point x="522" y="279" name="at01"/>
       <point x="565" y="211"/>
-      <point x="662" y="211" type="curve" smooth="yes" name="dh04"/>
+      <point x="662" y="211" type="curve" name="dh04" smooth="yes"/>
       <point x="779" y="211" name="dh03"/>
       <point x="839" y="310" name="iv01"/>
       <point x="839" y="479" type="curve" smooth="yes"/>
@@ -28,40 +28,4 @@
       <point x="698" y="-27"/>
     </contour>
   </outline>
-  <lib>
-  <dict>
-  <key>com.fontlab.ttprogram</key>
-  <data>
-  <ttProgram>
-    <ttc code="doubleh" point1="dh01" point2="dh02" stem="X: 295"/>
-    <ttc code="doubleh" point1="dh03" point2="dh04" stem="X: 293"/>
-    <ttc code="singleh" point1="dh02" point2="sh01" stem="X: 293"/>
-    <ttc code="singleh" point1="dh03" point2="sh02"/>
-    <ttc code="singleh" point1="dh04" point2="sh03" round="true"/>
-    <ttc code="alignt" point="at01" zone="t: 0"/>
-    <ttc code="alignt" point="dh01" zone="t: 2"/>
-    <ttc code="alignb" point="ab01" zone="b: 0"/>
-    <ttc code="alignb" point="dh04" zone="b: 0"/>
-    <ttc code="singlev" point1="dh01" point2="sv01" stem="y: 225"/>
-    <ttc code="singlev" point1="ab01" point2="sv02" stem="y: 225"/>
-    <ttc code="mdeltav" point="sv02" delta="-1" ppm1="9" ppm2="9"/>
-    <ttc code="interpolatev" point="iv01" point1="ab01" point2="sv02"/>
-  </ttProgram>
-  </data>
-  <key>com.adobe.type.autohint</key>
-  <data>
-  <hintSetList>
-    <hintset pointTag="ab01">
-      <hstem pos="-27" width="238" />
-      <hstem pos="0" width="211" />
-      <hstem pos="1120" width="-20" />
-      <hstem pos="1331" width="225" />
-      <vstem pos="103" width="419" />
-      <vstem pos="231" width="291" />
-      <vstem pos="839" width="291" />
-    </hintset>
-  </hintSetList>
-  </data>
-  </dict>
-  </lib>
 </glyph>

@@ -4,7 +4,7 @@
   <unicode hex="00BE"/>
   <outline>
     <contour>
-      <point x="342" y="809" type="curve" smooth="yes" name="dv07"/>
+      <point x="342" y="809" type="curve" name="dv07" smooth="yes"/>
       <point x="289" y="809" name="sv01"/>
       <point x="241" y="813"/>
       <point x="192" y="820" type="curve" smooth="yes"/>
@@ -20,7 +20,7 @@
       <point x="361" y="949" type="curve" smooth="yes"/>
       <point x="434" y="949" name="ih01"/>
       <point x="482" y="963"/>
-      <point x="519" y="990" type="curve" smooth="yes" name="dv03"/>
+      <point x="519" y="990" type="curve" name="dv03" smooth="yes"/>
       <point x="558" y="1019"/>
       <point x="574" y="1056"/>
       <point x="574" y="1095" type="curve" smooth="yes"/>
@@ -29,7 +29,7 @@
       <point x="531" y="1172" type="curve" smooth="yes"/>
       <point x="502" y="1189" name="sh01"/>
       <point x="462" y="1198"/>
-      <point x="412" y="1198" type="curve" smooth="yes" name="ih02"/>
+      <point x="412" y="1198" type="curve" name="ih02" smooth="yes"/>
       <point x="301" y="1198" type="line"/>
       <point x="330" y="1344" type="line" name="dh02"/>
       <point x="439" y="1344" type="line" smooth="yes"/>
@@ -38,7 +38,7 @@
       <point x="574" y="1372" type="curve" smooth="yes"/>
       <point x="605" y="1391"/>
       <point x="621" y="1416"/>
-      <point x="621" y="1449" type="curve" smooth="yes" name="sv03"/>
+      <point x="621" y="1449" type="curve" name="sv03" smooth="yes"/>
       <point x="621" y="1477"/>
       <point x="608" y="1498"/>
       <point x="581" y="1513" type="curve" smooth="yes"/>
@@ -47,7 +47,7 @@
       <point x="472" y="1536" type="curve" smooth="yes"/>
       <point x="439" y="1536" name="sv04"/>
       <point x="400" y="1532"/>
-      <point x="354" y="1524" type="curve" smooth="yes" name="dv01"/>
+      <point x="354" y="1524" type="curve" name="dv01" smooth="yes"/>
       <point x="311" y="1516" name="sh02"/>
       <point x="261" y="1505" name="sh03"/>
       <point x="205" y="1489" type="curve"/>
@@ -107,47 +107,4 @@
       <point x="573" y="53" type="line"/>
     </contour>
   </outline>
-  <lib>
-  <dict>
-  <key>com.fontlab.ttprogram</key>
-  <data>
-  <ttProgram>
-    <ttc code="doubleh" point1="dh01" point2="dh02" stem="X: 160"/>
-    <ttc code="mdeltah" point="dh01" delta="3" ppm1="21" ppm2="22"/>
-    <ttc code="mdeltah" point="dh01" delta="2" ppm1="9" ppm2="20"/>
-    <ttc code="interpolateh" point="ih01" point1="dh01" point2="dh02" align="round"/>
-    <ttc code="mdeltah" point="ih01" delta="3" ppm1="21" ppm2="22"/>
-    <ttc code="mdeltah" point="ih01" delta="2" ppm1="9" ppm2="20"/>
-    <ttc code="singleh" point1="ih01" point2="sh01" stem="X: 160"/>
-    <ttc code="interpolateh" point="ih02" point1="dh01" point2="dh02"/>
-    <ttc code="singleh" point1="dh02" point2="sh02" align="round"/>
-    <ttc code="singleh" point1="sh01" point2="sh03" align="round"/>
-    <ttc code="doublev" point1="dv01" point2="dv02" stem="y: 260"/>
-    <ttc code="doublev" point1="dv03" point2="dv04" stem="Y: 114"/>
-    <ttc code="doublev" point1="dv05" point2="dv06" stem="Y: 172"/>
-    <ttc code="doublev" point1="dv07" point2="dv08" stem="Y: 114"/>
-    <ttc code="singlev" point1="dv07" point2="sv01" align="round"/>
-    <ttc code="singlev" point1="dv04" point2="sv02" align="round"/>
-    <ttc code="interpolatev" point="ih02" point1="dv05" point2="dv06"/>
-    <ttc code="singlev" point1="dv02" point2="sh03"/>
-    <ttc code="singlev" point1="sh03" point2="sv03" stem="Y: 114"/>
-    <ttc code="singlev" point1="sv03" point2="sv04"/>
-  </ttProgram>
-  </data>
-  <key>com.adobe.type.autohint</key>
-  <data>
-  <hintSetList>
-    <hintset pointTag="dv07">
-      <hstem pos="-270" width="323" />
-      <hstem pos="-90" width="143" />
-      <hstem pos="809" width="140" />
-      <hstem pos="1198" width="146" />
-      <hstem pos="1536" width="140" />
-      <vstem pos="574" width="188" />
-      <vstem pos="621" width="192" />
-    </hintset>
-  </hintSetList>
-  </data>
-  </dict>
-  </lib>
 </glyph>

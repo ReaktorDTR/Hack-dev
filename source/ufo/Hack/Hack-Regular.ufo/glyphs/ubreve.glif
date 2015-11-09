@@ -45,21 +45,4 @@
       <point x="799" y="37"/>
     </contour>
   </outline>
-  <lib>
-  <dict>
-  <key>com.adobe.type.autohint</key>
-  <data>
-  <hintSetList>
-    <hintset pointTag="hr00">
-      <hstem pos="-29" width="160" />
-      <hstem pos="0" width="131" />
-      <hstem pos="1298" width="137" />
-      <hstem pos="1298" width="287" />
-      <vstem pos="195" width="184" />
-      <vstem pos="866" width="185" />
-    </hintset>
-  </hintSetList>
-  </data>
-  </dict>
-  </lib>
 </glyph>

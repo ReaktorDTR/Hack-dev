@@ -13,7 +13,7 @@
       <point x="710" y="939" type="curve" smooth="yes"/>
       <point x="710" y="1034" name="dh02"/>
       <point x="701" y="1131"/>
-      <point x="682" y="1235" type="curve" smooth="yes" name="av02"/>
+      <point x="682" y="1235" type="curve" name="av02" smooth="yes"/>
       <point x="663" y="1338"/>
       <point x="634" y="1445"/>
       <point x="597" y="1554" type="curve" name="sh01"/>
@@ -32,29 +32,4 @@
       <point x="468" y="-270" type="curve"/>
     </contour>
   </outline>
-  <lib>
-  <dict>
-  <key>com.fontlab.ttprogram</key>
-  <data>
-  <ttProgram>
-    <ttc code="doubleh" point1="dh01" point2="dh02" stem="X: 286"/>
-    <ttc code="mdeltah" point="dh01" delta="2" ppm1="9" ppm2="9"/>
-    <ttc code="singleh" point1="dh02" point2="sh01" round="true"/>
-    <ttc code="alignv" point="av01" align="round"/>
-    <ttc code="alignv" point="av02" align="round"/>
-    <ttc code="alignt" point="at01" zone="t: 2"/>
-  </ttProgram>
-  </data>
-  <key>com.adobe.type.autohint</key>
-  <data>
-  <hintSetList>
-    <hintset pointTag="av01">
-      <hstem pos="-249" width="-21" />
-      <hstem pos="1554" width="-20" />
-      <vstem pos="710" width="274" />
-    </hintset>
-  </hintSetList>
-  </data>
-  </dict>
-  </lib>
 </glyph>

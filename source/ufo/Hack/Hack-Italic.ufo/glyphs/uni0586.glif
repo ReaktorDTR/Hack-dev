@@ -27,7 +27,7 @@
       <point x="204" y="1203" type="curve" smooth="yes"/>
       <point x="204" y="1220" name="sv03"/>
       <point x="206" y="1237" name="sh06"/>
-      <point x="209" y="1256" type="curve" smooth="yes" name="sh02"/>
+      <point x="209" y="1256" type="curve" name="sh02" smooth="yes"/>
       <point x="225" y="1341" name="dv02"/>
       <point x="274" y="1423" name="sv04"/>
       <point x="366" y="1479" type="curve" smooth="yes"/>
@@ -85,48 +85,4 @@
       <point x="755" y="952" type="curve"/>
     </contour>
   </outline>
-  <lib>
-  <dict>
-  <key>com.fontlab.ttprogram</key>
-  <data>
-  <ttProgram>
-    <ttc code="alignh" point="ah01" align="round"/>
-    <ttc code="alignh" point="ah02" align="round"/>
-    <ttc code="singleh" point1="ah01" point2="sh01" align="round"/>
-    <ttc code="singleh" point1="sh01" point2="sh02" stem="X: 174"/>
-    <ttc code="mdeltah" point="sh02" delta="-2" ppm1="9" ppm2="9"/>
-    <ttc code="singleh" point1="sh02" point2="sh03" align="round"/>
-    <ttc code="singleh" point1="sh01" point2="sh04" align="round"/>
-    <ttc code="mdeltah" point="ah02" delta="2" ppm1="9" ppm2="9"/>
-    <ttc code="singleh" point1="ah02" point2="sh05" stem="X: 174"/>
-    <ttc code="singleh" point1="sh02" point2="sh06" align="round"/>
-    <ttc code="singleh" point1="ah02" point2="sh07" align="round"/>
-    <ttc code="singleh" point1="sh05" point2="sh08" round="true"/>
-    <ttc code="alignv" point="av01" align="round"/>
-    <ttc code="alignt" point="at01" zone="t: 2"/>
-    <ttc code="alignb" point="sh03" zone="b: 0"/>
-    <ttc code="alignb" point="ab01" zone="b: 0"/>
-    <ttc code="doublev" point1="dv01" point2="dv02" stem="y: 170"/>
-    <ttc code="singlev" point1="sh03" point2="sv01" stem="y: 143"/>
-    <ttc code="singlev" point1="dv02" point2="sv02"/>
-    <ttc code="singlev" point1="at01" point2="sv03" stem="y: 143"/>
-    <ttc code="singlev" point1="sv01" point2="sv04"/>
-    <ttc code="singlev" point1="dv01" point2="sv05"/>
-  </ttProgram>
-  </data>
-  <key>com.adobe.type.autohint</key>
-  <data>
-  <hintSetList>
-    <hintset pointTag="sh03">
-      <hstem pos="-405" width="-21" />
-      <hstem pos="-5" width="143" />
-      <hstem pos="952" width="163" />
-      <hstem pos="1414" width="142" />
-      <vstem pos="204" width="184" />
-      <vstem pos="1029" width="183" />
-    </hintset>
-  </hintSetList>
-  </data>
-  </dict>
-  </lib>
 </glyph>

@@ -23,29 +23,4 @@
       <point x="70" y="504" type="line" name="av02"/>
     </contour>
   </outline>
-  <lib>
-  <dict>
-  <key>com.fontlab.ttprogram</key>
-  <data>
-  <ttProgram>
-    <ttc code="alignv" point="av01" align="round"/>
-    <ttc code="alignv" point="av02" align="round"/>
-    <ttc code="doublev" point1="dv01" point2="dv02" stem="y: 143"/>
-    <ttc code="singlev" point1="dv02" point2="sv01"/>
-    <ttc code="interpolatev" point="iv01" point1="av02" point2="av01"/>
-    <ttc code="interpolatev" point="iv02" point1="av02" point2="av01"/>
-  </ttProgram>
-  </data>
-  <key>com.adobe.type.autohint</key>
-  <data>
-  <hintSetList>
-    <hintset pointTag="sv01">
-      <hstem pos="525" width="-21" />
-      <hstem pos="824" width="110" />
-      <hstem pos="1659" width="-20" />
-    </hintset>
-  </hintSetList>
-  </data>
-  </dict>
-  </lib>
 </glyph>

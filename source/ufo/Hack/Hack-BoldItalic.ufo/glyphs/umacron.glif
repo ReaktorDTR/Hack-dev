@@ -10,16 +10,16 @@
       <point x="432" y="1320" type="line"/>
     </contour>
     <contour>
-      <point x="368" y="-29" type="curve" smooth="yes" name="sv03"/>
+      <point x="368" y="-29" type="curve" name="sv03" smooth="yes"/>
       <point x="204" y="-29" name="dh01"/>
       <point x="106" y="67"/>
-      <point x="106" y="244" type="curve" smooth="yes" name="at01"/>
+      <point x="106" y="244" type="curve" name="at01" smooth="yes"/>
       <point x="106" y="283"/>
       <point x="111" y="327"/>
-      <point x="123" y="391" type="curve" smooth="yes" name="dh02"/>
+      <point x="123" y="391" type="curve" name="dh02" smooth="yes"/>
       <point x="266" y="1120" type="line" name="sv02"/>
       <point x="557" y="1120" type="line"/>
-      <point x="426" y="436" type="line" smooth="yes" name="at02"/>
+      <point x="426" y="436" type="line" name="at02" smooth="yes"/>
       <point x="419" y="400"/>
       <point x="416" y="362" name="ab01"/>
       <point x="416" y="338" type="curve" smooth="yes"/>
@@ -38,38 +38,4 @@
       <point x="513" y="-29"/>
     </contour>
   </outline>
-  <lib>
-  <dict>
-  <key>com.fontlab.ttprogram</key>
-  <data>
-  <ttProgram>
-    <ttc code="doubleh" point1="dh01" point2="dh02" stem="X: 320"/>
-    <ttc code="mdeltah" point="dh02" delta="-2" ppm1="9" ppm2="9"/>
-    <ttc code="singleh" point1="dh02" point2="sh01" stem="X: 286"/>
-    <ttc code="alignt" point="at01" zone="t: 0"/>
-    <ttc code="alignt" point="at02" zone="t: 0"/>
-    <ttc code="alignt" point="at03" zone="t: 1"/>
-    <ttc code="alignb" point="ab01" zone="b: 0"/>
-    <ttc code="singlev" point1="at03" point2="sv01" stem="Y: 172"/>
-    <ttc code="singlev" point1="ab01" point2="sv02" stem="y: 225"/>
-    <ttc code="mdeltav" point="sv02" delta="-1" ppm1="9" ppm2="9"/>
-    <ttc code="singlev" point1="sv02" point2="sv03" stem="y: 225"/>
-    <ttc code="interpolatev" point="sh01" point1="ab01" point2="sv02"/>
-  </ttProgram>
-  </data>
-  <key>com.adobe.type.autohint</key>
-  <data>
-  <hintSetList>
-    <hintset pointTag="at03">
-      <hstem pos="-29" width="240" />
-      <hstem pos="0" width="211" />
-      <hstem pos="1120" width="-20" />
-      <hstem pos="1320" width="188" />
-      <vstem pos="106" width="310" />
-      <vstem pos="416" width="270" />
-    </hintset>
-  </hintSetList>
-  </data>
-  </dict>
-  </lib>
 </glyph>

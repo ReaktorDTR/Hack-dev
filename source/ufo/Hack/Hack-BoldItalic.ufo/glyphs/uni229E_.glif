@@ -30,37 +30,4 @@
       <point x="531" y="298" type="line"/>
     </contour>
   </outline>
-  <lib>
-  <dict>
-  <key>com.fontlab.ttprogram</key>
-  <data>
-  <ttProgram>
-    <ttc code="doubleh" point1="dh01" point2="dh02" stem="X: 160"/>
-    <ttc code="doubleh" point1="dh03" point2="dh04" stem="X: 160"/>
-    <ttc code="doubleh" point1="dh05" point2="dh06" stem="X: 160"/>
-    <ttc code="singleh" point1="dh03" point2="sh01"/>
-    <ttc code="singleh" point1="dh04" point2="sh02"/>
-    <ttc code="singleh" point1="dh06" point2="rsb" round="true"/>
-    <ttc code="doublev" point1="dh06" point2="dh05" stem="Y: 172"/>
-    <ttc code="doublev" point1="dv01" point2="dv02" stem="Y: 172"/>
-    <ttc code="doublev" point1="dh03" point2="sh01" stem="Y: 172"/>
-    <ttc code="singlev" point1="sh01" point2="sv01"/>
-    <ttc code="singlev" point1="dh03" point2="sv02"/>
-  </ttProgram>
-  </data>
-  <key>com.adobe.type.autohint</key>
-  <data>
-  <hintSetList>
-    <hintset pointTag="dh01">
-      <hstem pos="75" width="170" />
-      <hstem pos="557" width="170" />
-      <hstem pos="1040" width="170" />
-      <vstem pos="50" width="170" />
-      <vstem pos="531" width="170" />
-      <vstem pos="1012" width="173" />
-    </hintset>
-  </hintSetList>
-  </data>
-  </dict>
-  </lib>
 </glyph>

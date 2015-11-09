@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="uni22A2" format="1">
+  <advance width="1233"/>
+  <unicode hex="22A2"/>
+  <outline>
+    <contour>
+      <point x="66" y="1284" type="line" name="dh01"/>
+      <point x="303" y="1284" type="line" name="dh02"/>
+      <point x="303" y="762" type="line"/>
+      <point x="1165" y="762" type="line" name="dv02"/>
+      <point x="1165" y="524" type="line" name="dv01"/>
+      <point x="303" y="524" type="line" name="sh01"/>
+      <point x="303" y="0" type="line" name="ab01"/>
+      <point x="66" y="0" type="line"/>
+    </contour>
+  </outline>
+</glyph>

@@ -7,13 +7,13 @@
       <point x="40" y="1493" type="line" name="dh01"/>
       <point x="295" y="1493" type="line" name="dh02"/>
       <point x="295" y="913" type="line"/>
-      <point x="305" y="913" type="line" smooth="yes" name="dv01"/>
+      <point x="305" y="913" type="line" name="dv01" smooth="yes"/>
       <point x="655" y="913" name="dh04"/>
       <point x="841" y="774" name="ab01"/>
       <point x="841" y="456" type="curve" smooth="yes"/>
       <point x="841" y="143" name="dh05"/>
       <point x="661" y="0" name="dh06"/>
-      <point x="305" y="0" type="curve" smooth="yes" name="ab02"/>
+      <point x="305" y="0" type="curve" name="ab02" smooth="yes"/>
       <point x="40" y="0" type="line"/>
     </contour>
     <contour>
@@ -34,38 +34,4 @@
       <point x="295" y="236" type="line"/>
     </contour>
   </outline>
-  <lib>
-  <dict>
-  <key>com.fontlab.ttprogram</key>
-  <data>
-  <ttProgram>
-    <ttc code="doubleh" point1="dh01" point2="dh02" stem="X: 236"/>
-    <ttc code="doubleh" point1="dh03" point2="dh04" stem="X: 236"/>
-    <ttc code="doubleh" point1="dh05" point2="dh06" stem="X: 236"/>
-    <ttc code="mdeltah" point="dh03" delta="2" ppm1="9" ppm2="9"/>
-    <ttc code="singleh" point1="dh02" point2="sh01"/>
-    <ttc code="singleh" point1="dh06" point2="sh02" round="true"/>
-    <ttc code="alignt" point="dh01" zone="t: 1"/>
-    <ttc code="alignt" point="dh05" zone="t: 1"/>
-    <ttc code="alignb" point="ab01" zone="b: 0"/>
-    <ttc code="alignb" point="ab02" zone="b: 0"/>
-    <ttc code="doublev" point1="sh01" point2="dv01" stem="y: 225"/>
-    <ttc code="singlev" point1="ab01" point2="sv01" stem="y: 225"/>
-  </ttProgram>
-  </data>
-  <key>com.adobe.type.autohint</key>
-  <data>
-  <hintSetList>
-    <hintset pointTag="dh01">
-      <hstem pos="0" width="236" />
-      <hstem pos="678" width="235" />
-      <hstem pos="1493" width="-20" />
-      <vstem pos="40" width="255" />
-      <vstem pos="586" width="255" />
-      <vstem pos="938" width="255" />
-    </hintset>
-  </hintSetList>
-  </data>
-  </dict>
-  </lib>
 </glyph>

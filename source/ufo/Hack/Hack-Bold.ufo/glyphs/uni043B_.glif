@@ -8,17 +8,17 @@
       <point x="49" y="240" type="line" smooth="yes"/>
       <point x="188" y="240" name="sh02"/>
       <point x="224" y="272" name="sh01"/>
-      <point x="240" y="439" type="curve" smooth="yes" name="at01"/>
+      <point x="240" y="439" type="curve" name="at01" smooth="yes"/>
       <point x="248" y="516"/>
       <point x="250" y="621" name="sh03"/>
-      <point x="250" y="700" type="curve" smooth="yes" name="ah02"/>
+      <point x="250" y="700" type="curve" name="ah02" smooth="yes"/>
       <point x="250" y="1120" type="line" name="sv02"/>
       <point x="1099" y="1120" type="line"/>
       <point x="1099" y="0" type="line" name="sh04"/>
       <point x="808" y="0" type="line"/>
       <point x="808" y="901" type="line" name="ab01"/>
       <point x="541" y="901" type="line"/>
-      <point x="541" y="704" type="line" smooth="yes" name="ah01"/>
+      <point x="541" y="704" type="line" name="ah01" smooth="yes"/>
       <point x="541" y="509" name="sh05"/>
       <point x="532" y="248"/>
       <point x="433" y="115" type="curve" smooth="yes"/>
@@ -28,36 +28,4 @@
       <point x="39" y="0" type="line"/>
     </contour>
   </outline>
-  <lib>
-  <dict>
-  <key>com.fontlab.ttprogram</key>
-  <data>
-  <ttProgram>
-    <ttc code="alignh" point="ah01" align="round"/>
-    <ttc code="alignh" point="ah02" align="round"/>
-    <ttc code="singleh" point1="ah01" point2="sh01" align="round"/>
-    <ttc code="singleh" point1="sh01" point2="sh02" align="round"/>
-    <ttc code="singleh" point1="ah02" point2="sh03" stem="X: 293"/>
-    <ttc code="singleh" point1="sh01" point2="sh04" stem="X: 293"/>
-    <ttc code="singleh" point1="sh03" point2="sh05" round="true"/>
-    <ttc code="alignt" point="at01" zone="t: 0"/>
-    <ttc code="alignb" point="sh03" zone="b: 0"/>
-    <ttc code="alignb" point="ab01" zone="b: 0"/>
-    <ttc code="singlev" point1="ab01" point2="sv01" stem="y: 225"/>
-    <ttc code="singlev" point1="at01" point2="sv02" stem="y: 225"/>
-  </ttProgram>
-  </data>
-  <key>com.adobe.type.autohint</key>
-  <data>
-  <hintSetList>
-    <hintset pointTag="sv01">
-      <hstem pos="0" width="240" />
-      <hstem pos="901" width="219" />
-      <vstem pos="250" width="291" />
-      <vstem pos="808" width="291" />
-    </hintset>
-  </hintSetList>
-  </data>
-  </dict>
-  </lib>
 </glyph>

@@ -4,18 +4,18 @@
   <unicode hex="0458"/>
   <outline>
     <contour>
-      <point x="614" y="1323" type="line" smooth="yes" name="dv01"/>
+      <point x="614" y="1323" type="line" name="dv01" smooth="yes"/>
       <point x="594" y="1323" name="dh01"/>
       <point x="584" y="1333"/>
-      <point x="584" y="1353" type="curve" smooth="yes" name="dv02"/>
+      <point x="584" y="1353" type="curve" name="dv02" smooth="yes"/>
       <point x="584" y="1635" type="line" smooth="yes"/>
       <point x="584" y="1655"/>
       <point x="594" y="1665" name="dh02"/>
       <point x="614" y="1665" type="curve" smooth="yes"/>
-      <point x="847" y="1665" type="line" smooth="yes" name="sv01"/>
+      <point x="847" y="1665" type="line" name="sv01" smooth="yes"/>
       <point x="867" y="1665"/>
       <point x="877" y="1655" name="sh01"/>
-      <point x="877" y="1635" type="curve" smooth="yes" name="sv02"/>
+      <point x="877" y="1635" type="curve" name="sv02" smooth="yes"/>
       <point x="877" y="1353" type="line" smooth="yes"/>
       <point x="877" y="1333" name="at01"/>
       <point x="867" y="1323" name="sh02"/>
@@ -38,32 +38,4 @@
       <point x="170" y="-424" type="line"/>
     </contour>
   </outline>
-  <lib>
-  <dict>
-  <key>com.fontlab.ttprogram</key>
-  <data>
-  <ttProgram>
-    <ttc code="doubleh" point1="dh01" point2="dh02" stem="X: 293"/>
-    <ttc code="singleh" point1="dh01" point2="sh01"/>
-    <ttc code="singleh" point1="dh02" point2="sh02"/>
-    <ttc code="alignt" point="at01" zone="t: 0"/>
-    <ttc code="alignb" point="ab01" zone="b: 2"/>
-    <ttc code="doublev" point1="dv01" point2="dv02" stem="y: 260"/>
-    <ttc code="singlev" point1="ab01" point2="sv01" stem="y: 225"/>
-    <ttc code="singlev" point1="at01" point2="sv02" stem="y: 225"/>
-  </ttProgram>
-  </data>
-  <key>com.adobe.type.autohint</key>
-  <data>
-  <hintSetList>
-    <hintset pointTag="dv01">
-      <hstem pos="-424" width="225" />
-      <hstem pos="895" width="225" />
-      <hstem pos="1323" width="342" />
-      <vstem pos="584" width="293" />
-    </hintset>
-  </hintSetList>
-  </data>
-  </dict>
-  </lib>
 </glyph>

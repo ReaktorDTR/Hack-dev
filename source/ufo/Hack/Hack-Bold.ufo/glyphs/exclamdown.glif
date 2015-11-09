@@ -4,7 +4,7 @@
   <unicode hex="00A1"/>
   <outline>
     <contour>
-      <point x="615" y="1508" type="curve" smooth="yes" name="at01"/>
+      <point x="615" y="1508" type="curve" name="at01" smooth="yes"/>
       <point x="638" y="1508" name="at02"/>
       <point x="660" y="1506"/>
       <point x="683" y="1495" type="curve"/>
@@ -22,10 +22,10 @@
       <point x="789" y="1324" type="curve" smooth="yes"/>
       <point x="789" y="1269" name="sv01"/>
       <point x="773" y="1224"/>
-      <point x="740" y="1191" type="curve" smooth="yes" name="sh01"/>
+      <point x="740" y="1191" type="curve" name="sh01" smooth="yes"/>
       <point x="708" y="1158" name="ih01"/>
       <point x="662" y="1140"/>
-      <point x="617" y="1140" type="curve" smooth="yes" name="sv02"/>
+      <point x="617" y="1140" type="curve" name="sv02" smooth="yes"/>
       <point x="606" y="1140"/>
       <point x="594" y="1141"/>
       <point x="586" y="1142" type="curve"/>
@@ -55,36 +55,4 @@
       <point x="548" y="960" type="line"/>
     </contour>
   </outline>
-  <lib>
-  <dict>
-  <key>com.fontlab.ttprogram</key>
-  <data>
-  <ttProgram>
-    <ttc code="doubleh" point1="dh01" point2="dh02" stem="X: 295"/>
-    <ttc code="mdeltah" point="dh02" delta="-2" ppm1="9" ppm2="10"/>
-    <ttc code="interpolateh" point="ih01" point1="dh01" point2="dh02" align="round"/>
-    <ttc code="singleh" point1="ih01" point2="sh01" stem="X: 293"/>
-    <ttc code="alignv" point="sh01" align="round"/>
-    <ttc code="alignt" point="at01" zone="t: 1"/>
-    <ttc code="alignt" point="at02" zone="t: 1"/>
-    <ttc code="alignt" point="at03" zone="t: 0"/>
-    <ttc code="alignt" point="at04" zone="t: 0"/>
-    <ttc code="singlev" point1="at03" point2="sv01" stem="Y: 172"/>
-    <ttc code="singlev" point1="sv01" point2="sv02"/>
-  </ttProgram>
-  </data>
-  <key>com.adobe.type.autohint</key>
-  <data>
-  <hintSetList>
-    <hintset pointTag="at01">
-      <hstem pos="-51" width="-21" />
-      <hstem pos="960" width="180" />
-      <hstem pos="1508" width="-20" />
-      <vstem pos="441" width="348" />
-      <vstem pos="470" width="285" />
-    </hintset>
-  </hintSetList>
-  </data>
-  </dict>
-  </lib>
 </glyph>

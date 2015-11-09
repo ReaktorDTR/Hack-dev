@@ -8,7 +8,7 @@
       <point x="200" y="-199" type="line" smooth="yes"/>
       <point x="265" y="-199"/>
       <point x="315" y="-181"/>
-      <point x="350" y="-144" type="curve" smooth="yes" name="at01"/>
+      <point x="350" y="-144" type="curve" name="at01" smooth="yes"/>
       <point x="386" y="-105"/>
       <point x="410" y="-45"/>
       <point x="427" y="43" type="curve" smooth="yes"/>
@@ -24,25 +24,4 @@
       <point x="-78" y="-424" type="line"/>
     </contour>
   </outline>
-  <lib>
-  <dict>
-  <key>com.fontlab.ttprogram</key>
-  <data>
-  <ttProgram>
-    <ttc code="alignt" point="at01" zone="t: 0"/>
-    <ttc code="alignb" point="ab01" zone="b: 2"/>
-    <ttc code="singlev" point1="ab01" point2="sv01" stem="y: 225"/>
-  </ttProgram>
-  </data>
-  <key>com.adobe.type.autohint</key>
-  <data>
-  <hintSetList>
-    <hintset pointTag="sv01">
-      <hstem pos="-424" width="225" />
-      <hstem pos="1120" width="-20" />
-    </hintset>
-  </hintSetList>
-  </data>
-  </dict>
-  </lib>
 </glyph>

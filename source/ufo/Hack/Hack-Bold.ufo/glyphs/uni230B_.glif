@@ -12,28 +12,4 @@
       <point x="303" y="-270" type="line" name="dh01"/>
     </contour>
   </outline>
-  <lib>
-  <dict>
-  <key>com.fontlab.ttprogram</key>
-  <data>
-  <ttProgram>
-    <ttc code="doubleh" point1="dh01" point2="dh02" stem="X: 295"/>
-    <ttc code="singleh" point1="dh02" point2="sh01" stem="X: 293"/>
-    <ttc code="alignt" point="at01" zone="t: 2"/>
-    <ttc code="doublev" point1="dh01" point2="sh01" stem="Y: 172"/>
-  </ttProgram>
-  </data>
-  <key>com.adobe.type.autohint</key>
-  <data>
-  <hintSetList>
-    <hintset pointTag="hr00">
-      <hstem pos="-270" width="190" />
-      <hstem pos="1556" width="-20" />
-      <vstem pos="303" width="508" />
-      <vstem pos="545" width="266" />
-    </hintset>
-  </hintSetList>
-  </data>
-  </dict>
-  </lib>
 </glyph>

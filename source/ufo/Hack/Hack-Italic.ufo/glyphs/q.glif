@@ -19,13 +19,13 @@
       <point x="98" y="372" type="curve" smooth="yes"/>
       <point x="98" y="459" name="av01"/>
       <point x="112" y="555"/>
-      <point x="139" y="652" type="curve" smooth="yes" name="dv02"/>
+      <point x="139" y="652" type="curve" name="dv02" smooth="yes"/>
       <point x="166" y="745"/>
       <point x="203" y="833"/>
       <point x="252" y="909" type="curve" smooth="yes"/>
       <point x="304" y="990"/>
       <point x="361" y="1047"/>
-      <point x="432" y="1087" type="curve" smooth="yes" name="sv01"/>
+      <point x="432" y="1087" type="curve" name="sv01" smooth="yes"/>
       <point x="502" y="1127"/>
       <point x="579" y="1147"/>
       <point x="663" y="1147" type="curve" smooth="yes"/>
@@ -79,37 +79,4 @@
       <point x="430" y="127"/>
     </contour>
   </outline>
-  <lib>
-  <dict>
-  <key>com.fontlab.ttprogram</key>
-  <data>
-  <ttProgram>
-    <ttc code="doubleh" point1="dh01" point2="dh02" stem="X: 194"/>
-    <ttc code="mdeltah" point="dh02" delta="-2" ppm1="9" ppm2="16"/>
-    <ttc code="mdeltah" point="dh02" delta="-3" ppm1="17" ppm2="18"/>
-    <ttc code="alignv" point="av01" align="round"/>
-    <ttc code="alignt" point="at01" zone="t: 0"/>
-    <ttc code="alignt" point="at02" zone="t: 0"/>
-    <ttc code="doublev" point1="dv01" point2="dv02" stem="Y: 156"/>
-    <ttc code="interpolatev" point="iv01" point1="av01" point2="at02"/>
-    <ttc code="interpolatev" point="iv02" point1="av01" point2="at02"/>
-    <ttc code="singlev" point1="at02" point2="sv01" stem="Y: 156"/>
-    <ttc code="mdeltav" point="sv01" delta="2" ppm1="17" ppm2="18"/>
-    <ttc code="mdeltav" point="sv01" delta="1" ppm1="9" ppm2="16"/>
-  </ttProgram>
-  </data>
-  <key>com.adobe.type.autohint</key>
-  <data>
-  <hintSetList>
-    <hintset pointTag="iv01">
-      <hstem pos="-405" width="-21" />
-      <hstem pos="-29" width="156" />
-      <hstem pos="991" width="156" />
-      <hstem pos="1120" width="-20" />
-      <vstem pos="98" width="197" />
-    </hintset>
-  </hintSetList>
-  </data>
-  </dict>
-  </lib>
 </glyph>

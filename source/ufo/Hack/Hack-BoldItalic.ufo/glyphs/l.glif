@@ -4,7 +4,7 @@
   <unicode hex="006C"/>
   <outline>
     <contour>
-      <point x="690" y="-10" type="line" smooth="yes" name="ab01"/>
+      <point x="690" y="-10" type="line" name="ab01" smooth="yes"/>
       <point x="547" y="-10"/>
       <point x="457" y="8"/>
       <point x="400" y="47" type="curve" smooth="yes"/>
@@ -38,28 +38,4 @@
       <point x="987" y="-10" type="line"/>
     </contour>
   </outline>
-  <lib>
-  <dict>
-  <key>com.fontlab.ttprogram</key>
-  <data>
-  <ttProgram>
-    <ttc code="alignt" point="at01" zone="t: 2"/>
-    <ttc code="alignb" point="ab01" zone="b: 0"/>
-    <ttc code="alignb" point="ab02" zone="b: 0"/>
-    <ttc code="singlev" point1="at01" point2="sv01" stem="y: 225"/>
-    <ttc code="singlev" point1="ab01" point2="sv02" stem="y: 225"/>
-    <ttc code="singlev" point1="sv02" point2="sv03"/>
-  </ttProgram>
-  </data>
-  <key>com.adobe.type.autohint</key>
-  <data>
-  <hintSetList>
-    <hintset pointTag="ab01">
-      <hstem pos="-10" width="225" />
-      <hstem pos="1331" width="225" />
-    </hintset>
-  </hintSetList>
-  </data>
-  </dict>
-  </lib>
 </glyph>

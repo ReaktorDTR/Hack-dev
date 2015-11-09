@@ -13,7 +13,7 @@
       <point x="283" y="643" type="curve" smooth="yes"/>
       <point x="283" y="797" name="dh02"/>
       <point x="309" y="950"/>
-      <point x="361" y="1101" type="curve" smooth="yes" name="av02"/>
+      <point x="361" y="1101" type="curve" name="av02" smooth="yes"/>
       <point x="412" y="1248"/>
       <point x="484" y="1393"/>
       <point x="596" y="1554" type="curve"/>
@@ -32,28 +32,4 @@
       <point x="824" y="-270" type="curve"/>
     </contour>
   </outline>
-  <lib>
-  <dict>
-  <key>com.fontlab.ttprogram</key>
-  <data>
-  <ttProgram>
-    <ttc code="doubleh" point1="dh01" point2="dh02" stem="X: 293"/>
-    <ttc code="mdeltah" point="dh02" delta="-2" ppm1="9" ppm2="9"/>
-    <ttc code="alignv" point="av01" align="round"/>
-    <ttc code="alignv" point="av02" align="round"/>
-    <ttc code="alignt" point="at01" zone="t: 2"/>
-  </ttProgram>
-  </data>
-  <key>com.adobe.type.autohint</key>
-  <data>
-  <hintSetList>
-    <hintset pointTag="av01">
-      <hstem pos="-249" width="-21" />
-      <hstem pos="1554" width="-20" />
-      <vstem pos="283" width="281" />
-    </hintset>
-  </hintSetList>
-  </data>
-  </dict>
-  </lib>
 </glyph>

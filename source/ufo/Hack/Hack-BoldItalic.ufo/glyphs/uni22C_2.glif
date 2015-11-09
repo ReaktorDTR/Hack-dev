@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="uni22C2" format="1">
+  <advance width="1233"/>
+  <unicode hex="22C2"/>
+  <outline>
+    <contour>
+      <point x="90" y="936" type="line" name="sh01" smooth="yes"/>
+      <point x="90" y="1384" name="dv02"/>
+      <point x="234" y="1547"/>
+      <point x="617" y="1547" type="curve" name="sh02" smooth="yes"/>
+      <point x="1001" y="1547" name="ah02"/>
+      <point x="1143" y="1384"/>
+      <point x="1143" y="936" type="curve" name="dv01" smooth="yes"/>
+      <point x="1143" y="-436" type="line" name="sh03"/>
+      <point x="905" y="-436" type="line" name="av01"/>
+      <point x="905" y="916" type="line" smooth="yes"/>
+      <point x="905" y="1227" name="ah01"/>
+      <point x="841" y="1304" name="sh04"/>
+      <point x="617" y="1304" type="curve" smooth="yes"/>
+      <point x="392" y="1304"/>
+      <point x="328" y="1226"/>
+      <point x="328" y="916" type="curve" smooth="yes"/>
+      <point x="328" y="-436" type="line"/>
+      <point x="90" y="-436" type="line"/>
+    </contour>
+  </outline>
+</glyph>

@@ -8,7 +8,7 @@
       <point x="293" y="-272" type="line" smooth="yes"/>
       <point x="353" y="-272"/>
       <point x="393" y="-252"/>
-      <point x="420" y="-225" type="curve" smooth="yes" name="at01"/>
+      <point x="420" y="-225" type="curve" name="at01" smooth="yes"/>
       <point x="449" y="-194"/>
       <point x="485" y="-126" name="iv01"/>
       <point x="537" y="18" type="curve" name="at02"/>
@@ -17,7 +17,7 @@
       <point x="631" y="244" type="line"/>
       <point x="958" y="1120" type="line"/>
       <point x="1153" y="1120" type="line"/>
-      <point x="858" y="360" type="line" smooth="yes" name="ab01"/>
+      <point x="858" y="360" type="line" name="ab01" smooth="yes"/>
       <point x="763" y="114"/>
       <point x="805" y="229"/>
       <point x="741" y="52" type="curve"/>
@@ -33,27 +33,4 @@
       <point x="184" y="-426" type="line"/>
     </contour>
   </outline>
-  <lib>
-  <dict>
-  <key>com.fontlab.ttprogram</key>
-  <data>
-  <ttProgram>
-    <ttc code="alignt" point="at01" zone="t: 0"/>
-    <ttc code="alignt" point="at02" zone="t: 0"/>
-    <ttc code="alignb" point="ab01" zone="b: 2"/>
-    <ttc code="singlev" point1="ab01" point2="sv01" stem="Y: 156"/>
-    <ttc code="interpolatev" point="iv01" point1="ab01" point2="at01"/>
-  </ttProgram>
-  </data>
-  <key>com.adobe.type.autohint</key>
-  <data>
-  <hintSetList>
-    <hintset pointTag="sv01">
-      <hstem pos="-426" width="154" />
-      <hstem pos="1120" width="-20" />
-    </hintset>
-  </hintSetList>
-  </data>
-  </dict>
-  </lib>
 </glyph>

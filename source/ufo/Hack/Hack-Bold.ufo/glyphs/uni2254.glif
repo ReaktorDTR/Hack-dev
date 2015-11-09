@@ -4,10 +4,10 @@
   <unicode hex="2254"/>
   <outline>
     <contour>
-      <point x="111" y="708" type="line" smooth="yes" name="dv07"/>
+      <point x="111" y="708" type="line" name="dv07" smooth="yes"/>
       <point x="91" y="708" name="dh01"/>
       <point x="81" y="718"/>
-      <point x="81" y="738" type="curve" smooth="yes" name="dv08"/>
+      <point x="81" y="738" type="curve" name="dv08" smooth="yes"/>
       <point x="81" y="1000" type="line" smooth="yes"/>
       <point x="81" y="1020"/>
       <point x="91" y="1030" name="dh02"/>
@@ -16,10 +16,10 @@
       <point x="307" y="1030" name="dv06"/>
       <point x="317" y="1020" name="dv05"/>
       <point x="317" y="1000" type="curve" smooth="yes"/>
-      <point x="317" y="738" type="line" smooth="yes" name="dv01"/>
+      <point x="317" y="738" type="line" name="dv01" smooth="yes"/>
       <point x="317" y="718" name="sh01"/>
       <point x="307" y="708"/>
-      <point x="287" y="708" type="curve" smooth="yes" name="dv02"/>
+      <point x="287" y="708" type="curve" name="dv02" smooth="yes"/>
     </contour>
     <contour>
       <point x="407" y="987" type="line"/>
@@ -52,32 +52,4 @@
       <point x="407" y="295" type="line"/>
     </contour>
   </outline>
-  <lib>
-  <dict>
-  <key>com.fontlab.ttprogram</key>
-  <data>
-  <ttProgram>
-    <ttc code="doubleh" point1="dh01" point2="dh02" stem="X: 236"/>
-    <ttc code="singleh" point1="dh01" point2="sh01"/>
-    <ttc code="singleh" point1="dh02" point2="sh02"/>
-    <ttc code="doublev" point1="dv01" point2="dv02" stem="y: 260"/>
-    <ttc code="doublev" point1="dv03" point2="dv04" stem="y: 225"/>
-    <ttc code="doublev" point1="dv05" point2="dv06" stem="y: 225"/>
-    <ttc code="doublev" point1="dv07" point2="dv08" stem="y: 260"/>
-  </ttProgram>
-  </data>
-  <key>com.adobe.type.autohint</key>
-  <data>
-  <hintSetList>
-    <hintset pointTag="dv07">
-      <hstem pos="253" width="321" />
-      <hstem pos="295" width="237" />
-      <hstem pos="708" width="322" />
-      <hstem pos="752" width="235" />
-      <vstem pos="81" width="236" />
-    </hintset>
-  </hintSetList>
-  </data>
-  </dict>
-  </lib>
 </glyph>

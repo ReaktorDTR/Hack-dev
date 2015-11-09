@@ -15,7 +15,7 @@
       <point x="88" y="479" type="line" name="dv05"/>
       <point x="191" y="560" name="iv02"/>
       <point x="286" y="596"/>
-      <point x="390" y="596" type="curve" smooth="yes" name="dv06"/>
+      <point x="390" y="596" type="curve" name="dv06" smooth="yes"/>
       <point x="437" y="596"/>
       <point x="477" y="589" name="av01"/>
       <point x="524" y="576" type="curve"/>
@@ -29,7 +29,7 @@
       <point x="88" y="848" type="line" name="dv02"/>
       <point x="189" y="925" name="iv04"/>
       <point x="279" y="963"/>
-      <point x="399" y="963" type="curve" smooth="yes" name="dv01"/>
+      <point x="399" y="963" type="curve" name="dv01" smooth="yes"/>
       <point x="466" y="963"/>
       <point x="519" y="951"/>
       <point x="624" y="908" type="curve" name="av02"/>
@@ -67,36 +67,4 @@
       <point x="516" y="48" type="line"/>
     </contour>
   </outline>
-  <lib>
-  <dict>
-  <key>com.fontlab.ttprogram</key>
-  <data>
-  <ttProgram>
-    <ttc code="alignv" point="av01" align="round"/>
-    <ttc code="alignv" point="av02" align="round"/>
-    <ttc code="doublev" point1="dv01" point2="dv02" stem="y: 170"/>
-    <ttc code="doublev" point1="dv03" point2="dv04" stem="y: 170"/>
-    <ttc code="doublev" point1="dv05" point2="dv06" stem="y: 170"/>
-    <ttc code="doublev" point1="dv07" point2="dv08" stem="y: 170"/>
-    <ttc code="interpolatev" point="iv01" point1="av02" point2="av01"/>
-    <ttc code="interpolatev" point="iv02" point1="av02" point2="av01"/>
-    <ttc code="interpolatev" point="iv03" point1="av02" point2="av01"/>
-    <ttc code="interpolatev" point="iv04" point1="av02" point2="av01"/>
-  </ttProgram>
-  </data>
-  <key>com.adobe.type.autohint</key>
-  <data>
-  <hintSetList>
-    <hintset pointTag="hr00">
-      <hstem pos="69" width="-21" />
-      <hstem pos="305" width="166" />
-      <hstem pos="430" width="166" />
-      <hstem pos="674" width="166" />
-      <hstem pos="797" width="166" />
-      <hstem pos="1219" width="-20" />
-    </hintset>
-  </hintSetList>
-  </data>
-  </dict>
-  </lib>
 </glyph>

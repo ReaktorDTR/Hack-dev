@@ -34,10 +34,10 @@
       <point x="535" y="224"/>
       <point x="600" y="199"/>
       <point x="621" y="191" type="curve"/>
-      <point x="653" y="176" type="line" smooth="yes" name="av02"/>
+      <point x="653" y="176" type="line" name="av02" smooth="yes"/>
       <point x="730" y="140" name="iv07"/>
       <point x="800" y="122"/>
-      <point x="863" y="122" type="curve" smooth="yes" name="iv08"/>
+      <point x="863" y="122" type="curve" name="iv08" smooth="yes"/>
       <point x="955" y="122"/>
       <point x="1043" y="161"/>
       <point x="1143" y="245" type="curve"/>
@@ -60,34 +60,4 @@
       <point x="643" y="601" type="line"/>
     </contour>
   </outline>
-  <lib>
-  <dict>
-  <key>com.fontlab.ttprogram</key>
-  <data>
-  <ttProgram>
-    <ttc code="alignv" point="av01" align="round"/>
-    <ttc code="alignv" point="av02" align="round"/>
-    <ttc code="doublev" point1="dv01" point2="dv02" stem="y: 170"/>
-    <ttc code="interpolatev" point="iv01" point1="dv01" point2="dv02"/>
-    <ttc code="interpolatev" point="iv02" point1="av02" point2="av01"/>
-    <ttc code="interpolatev" point="iv03" point1="av02" point2="av01"/>
-    <ttc code="interpolatev" point="iv04" point1="av02" point2="av01"/>
-    <ttc code="interpolatev" point="iv05" point1="av02" point2="av01"/>
-    <ttc code="interpolatev" point="iv06" point1="av02" point2="av01"/>
-    <ttc code="interpolatev" point="iv07" point1="av02" point2="av01"/>
-    <ttc code="interpolatev" point="iv08" point1="av02" point2="av01"/>
-  </ttProgram>
-  </data>
-  <key>com.adobe.type.autohint</key>
-  <data>
-  <hintSetList>
-    <hintset pointTag="hr00">
-      <hstem pos="-222" width="-21" />
-      <hstem pos="-44" width="166" />
-      <hstem pos="1288" width="-20" />
-    </hintset>
-  </hintSetList>
-  </data>
-  </dict>
-  </lib>
 </glyph>
