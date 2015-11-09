@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="uni227A" format="1">
+  <advance width="1233"/>
+  <unicode hex="227A"/>
+  <outline>
+    <contour>
+      <point x="1143" y="-45" type="line" name="av01"/>
+      <point x="925" y="257"/>
+      <point x="573" y="458"/>
+      <point x="86" y="558" type="curve" name="av02"/>
+      <point x="86" y="724" type="line"/>
+      <point x="576" y="823" name="iv01"/>
+      <point x="928" y="1024"/>
+      <point x="1143" y="1327" type="curve"/>
+      <point x="1143" y="1088" type="line"/>
+      <point x="925" y="848"/>
+      <point x="676" y="699"/>
+      <point x="396" y="641" type="curve"/>
+      <point x="681" y="576"/>
+      <point x="930" y="427"/>
+      <point x="1143" y="194" type="curve"/>
+    </contour>
+  </outline>
+  <lib>
+  <dict>
+  <key>com.fontlab.ttprogram</key>
+  <data>
+  <ttProgram>
+    <ttc code="alignv" point="av01" align="round"/>
+    <ttc code="alignv" point="av02" align="round"/>
+    <ttc code="interpolatev" point="iv01" point1="av01" point2="av02"/>
+  </ttProgram>
+  </data>
+  <key>com.adobe.type.autohint</key>
+  <data>
+  <hintSetList>
+    <hintset pointTag="av01">
+      <hstem pos="-24" width="-21" />
+      <hstem pos="1327" width="-20" />
+    </hintset>
+  </hintSetList>
+  </data>
+  </dict>
+  </lib>
+</glyph>
