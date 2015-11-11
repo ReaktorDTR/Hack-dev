@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="uni27A1" format="1">
+  <advance width="1233"/>
+  <unicode hex="27A1"/>
+  <outline>
+    <contour>
+      <point x="810" y="558" type="line" name="dv01"/>
+      <point x="56" y="558" type="line"/>
+      <point x="112" y="842" type="line"/>
+      <point x="866" y="842" type="line" name="dv02"/>
+      <point x="898" y="1011" type="line" name="av02"/>
+      <point x="1149" y="700" type="line"/>
+      <point x="778" y="389" type="line" name="av01"/>
+    </contour>
+  </outline>
+</glyph>
