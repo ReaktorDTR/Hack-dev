@@ -1,9 +1,1 @@
-# Prefix: Languagesystems
 languagesystem DFLT dflt;
-languagesystem latn dflt;
-
-# Prefix: Prefix
-# automatic
-languagesystem DFLT dflt;
-languagesystem latn dflt;
-
