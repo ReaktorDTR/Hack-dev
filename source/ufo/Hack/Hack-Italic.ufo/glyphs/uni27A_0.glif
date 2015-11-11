@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="uni27A0" format="1">
+  <advance width="1233"/>
+  <unicode hex="27A0"/>
+  <outline>
+    <contour>
+      <point x="796" y="510" type="line" name="dv01"/>
+      <point x="511" y="510" type="line"/>
+      <point x="595" y="937" type="line"/>
+      <point x="880" y="937" type="line" name="dv02"/>
+      <point x="899" y="1035" type="line" name="av01"/>
+      <point x="957" y="890" name="iv01"/>
+      <point x="1041" y="786" name="av02"/>
+      <point x="1149" y="724" type="curve" name="dh01"/>
+      <point x="1016" y="661" name="dh02"/>
+      <point x="893" y="557" name="sv01"/>
+      <point x="777" y="412" type="curve"/>
+    </contour>
+    <contour>
+      <point x="126" y="937" type="line" name="dh03"/>
+      <point x="168" y="937" type="line" name="dh04"/>
+      <point x="84" y="510" type="line" name="sv02"/>
+      <point x="42" y="510" type="line"/>
+    </contour>
+    <contour>
+      <point x="225" y="937" type="line" name="dh05"/>
+      <point x="310" y="937" type="line" name="dh06"/>
+      <point x="226" y="510" type="line" name="sv03"/>
+      <point x="141" y="510" type="line"/>
+    </contour>
+    <contour>
+      <point x="367" y="937" type="line"/>
+      <point x="538" y="937" type="line"/>
+      <point x="454" y="510" type="line"/>
+      <point x="283" y="510" type="line"/>
+    </contour>
+  </outline>
+</glyph>

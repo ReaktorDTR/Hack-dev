@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="uni2794" format="1">
+  <advance width="1233"/>
+  <unicode hex="2794"/>
+  <outline>
+    <contour>
+      <point x="820" y="565" type="line" name="sv01"/>
+      <point x="67" y="565" type="line"/>
+      <point x="101" y="735" type="line"/>
+      <point x="854" y="735" type="line" name="dv02"/>
+      <point x="642" y="997" type="line"/>
+      <point x="869" y="997" type="line" name="sv02"/>
+      <point x="1149" y="650" type="line"/>
+      <point x="735" y="303" type="line" name="dv01"/>
+      <point x="508" y="303" type="line"/>
+    </contour>
+  </outline>
+</glyph>
