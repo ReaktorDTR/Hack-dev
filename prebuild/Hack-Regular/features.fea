@@ -20,7 +20,7 @@ table hhea {
 	LineGap 0;
 } hhea;
 table head {
-	FontRevision 003.000;
+	FontRevision xVERSIONx;
 } head;
 table name {
 	nameid 0 1 "Copyright (c) 2015 Christopher Simpkins / Copyright (c) 2003 by Bitstream, Inc. All Rights Reserved.";
@@ -30,8 +30,8 @@ table name {
 	nameid 2 1 "Regular";
 	nameid 2 3 1 1033 "Regular";
 	nameid 4 3 1 1033 "Hack-Regular";
-	nameid 5 1 "Version 3.000";
-	nameid 5 3 1 1033 "Version 3.000";
+	nameid 5 1 "Version xVERSIONx";
+	nameid 5 3 1 1033 "Version xVERSIONx";
 	nameid 8 1 "Christopher Simpkins";
 	nameid 8 3 1 1033 "Christopher Simpkins";
 	nameid 9 1 "Christopher Simpkins";
