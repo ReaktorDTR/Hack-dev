@@ -26,14 +26,16 @@ all: check make_temp build_otf build_ttf copy_otf copy_ttf webfonts cleanup
 desktop: check_desktop make_temp build_otf build_ttf copy_otf copy_ttf cleanup
 check: check_tools_otf check_tools_ttf check_tools_svg check_tools_eot check_tools_woff check_tools_woff2
 check_desktop: check_tools_otf check_tools_ttf
+check_webfonts: check_desktop check_tools_subsetting check_tools_svg check_tools_eot check_tools_woff check_tools_woff2
 otf: make_temp build_otf copy_otf cleanup
 ttf: make_temp build_otf build_ttf copy_ttf cleanup
 version: version_set
-webfonts: make_temp build_otf build_ttf build_svg build_eot build_woff build_woff2 copy_webfonts update_css cleanup
+webfonts: check_webfonts make_temp build_otf build_ttf build_subsets build_svg build_eot build_woff build_woff2 copy_webfonts update_css cleanup
 
 # build chains
 build_otf: check_tools_otf build_otf_setversion build_otf_run hinting_otf
 build_ttf: check_tools_ttf build_ttf_run hinting_ttf
+build_subsets: check_tools_subsetting build_subset_latin1
 build_svg: check_tools_svg build_svg_run
 build_eot: check_tools_eot build_eot_run
 build_woff: check_tools_woff build_woff_run
@@ -62,35 +64,49 @@ cleanup:
 	rm -f $(FOLDER_PREBUILD)/*/*_versioned.fea
 	echo "done"
 
-# check if all tools required for OTF build are available
-check_tools_otf:
+# check if all tools required for build are available
+check_tools_otf: check_tool_makeotf
+check_tools_ttf: check_tool_fontforge
+check_tools_subsetting: check_tool_fonttools
+check_tools_svg:
+check_tools_eot: check_tool_sfnttool
+check_tools_woff: check_tool_sfnt2woff_zopfli
+check_tools_woff2: check_tool_woff2
+
+check_tool_makeotf:
 	printf "Checking if MakeOTF is available... "
 	command -v makeotf >/dev/null 2>&1 || { echo "no\n\nPlease install MakeOTF, which is part of the Adobe Font Development Kit for OpenType.\n" >&2; exit 1; }
 	echo "yes"
 
-# check if all tools required for TTF build are available
-check_tools_ttf:
+check_tool_fontforge:
 	printf "Checking if FontForge is available... "
 	command -v fontforge >/dev/null 2>&1 || { echo "no\n\nPlease install FontForge.\n" >&2; exit 1; }
 	echo "yes"
 
-# check if all tools required for SVG build are available
-check_tools_svg:
-	# TODO
-
-# check if all tools required for EOT build are available
-check_tools_eot:
-	printf "Checking if ttf2eot is available... "
-	command -v ttf2eot >/dev/null 2>&1 || { echo "no\n\nPlease install ttf2eot.\n" >&2; exit 1; }
+check_tool_fonttools:
+	printf "Checking if fonttools are available... "
+	command -v pyftsubset >/dev/null 2>&1 || { echo "no\n\nPlease install fonttools (Behdad’s fork).\n" >&2; exit 1; }
 	echo "yes"
 
-# check if all tools required for WOFF build are available
-check_tools_woff:
-	# TODO
+check_tool_java:
+	printf "Checking if Java is available... "
+	command -v java >/dev/null 2>&1 || { echo "no\n\nPlease install Java.\n" >&2; exit 1; }
+	echo "yes"
 
-# check if all tools required for WOFF2 build are available
-check_tools_woff2:
-	# TODO
+check_tool_sfnttool: check_tool_java
+	printf "Checking if sfnttool is available... "
+	[ -r $(FOLDER_TOOLS)sfnttool.jar ] || { echo "no\n\nPlease install sfnttool or sfntly.\n" >&2; exit 1; }
+	echo "yes"
+
+check_tool_sfnt2woff_zopfli:
+	printf "Checking if sfnt2woff-zopfli is available... "
+	command -v sfnt2woff-zopfli >/dev/null 2>&1 || { echo "no\n\nPlease install sfnt2woff-zopfli.\n" >&2; exit 1; }
+	echo "yes"
+
+check_tool_woff2:
+	printf "Checking if woff2 is available... "
+	command -v woff2_compress >/dev/null 2>&1 || { echo "no\n\nPlease install woff2.\n" >&2; exit 1; }
+	echo "yes"
 
 # add version info to OTF feature files
 build_otf_setversion:
@@ -144,6 +160,24 @@ build_ttf_run:
 	fontforge -c "f = open('Hack-BoldItalic.otf'); f.generate('Hack-BoldItalic.ttf'); quit();"; \
 	echo "done"
 
+build_subsets: build_subset_latin1
+
+# build Latin1 subset
+build_subset_latin1:
+	cd $(FOLDER_TEMP); \
+	printf "Subsetting TTF font Regular to Latin1... "; \
+	pyftsubset Hack-Regular.ttf --unicodes=41-5a,61-7a \
+	echo "done"; \
+	printf "Subsetting TTF font Italic to Latin1... "; \
+	pyftsubset Hack-Italic.ttf --unicodes=41-5a,61-7a \
+	echo "done"; \
+	printf "Subsetting TTF font Bold to Latin1... "; \
+	pyftsubset Hack-Bold.ttf --unicodes=41-5a,61-7a \
+	echo "done"; \
+	printf "Subsetting TTF font BoldItalic to Latin1... "; \
+	pyftsubset Hack-BoldItalic.ttf --unicodes=41-5a,61-7a \
+	echo "done"
+
 # build SVG
 build_svg_run:
 	# TODO
@@ -152,18 +186,18 @@ build_svg_run:
 build_eot_run:
 	printf "Building Latin subset EOT fonts... "
 	cd $(FOLDER_TEMP); \
-	ttf2eot hack-regular-latin-webfont.ttf    hack-regular-latin-webfont.eot; \
-	ttf2eot hack-italic-latin-webfont.ttf     hack-italic-latin-webfont.eot; \
-	ttf2eot hack-bold-latin-webfont.ttf       hack-bold-latin-webfont.eot; \
-	ttf2eot hack-bolditalic-latin-webfont.ttf hack-bolditalic-latin-webfont.eot
+	java -jar $(FOLDER_TOOLS)sfnttool.jar -e -x hack-regular-latin-webfont.ttf    hack-regular-latin-webfont.eot; \
+	java -jar $(FOLDER_TOOLS)sfnttool.jar -e -x hack-italic-latin-webfont.ttf     hack-italic-latin-webfont.eot; \
+	java -jar $(FOLDER_TOOLS)sfnttool.jar -e -x hack-bold-latin-webfont.ttf       hack-bold-latin-webfont.eot; \
+	java -jar $(FOLDER_TOOLS)sfnttool.jar -e -x hack-bolditalic-latin-webfont.ttf hack-bolditalic-latin-webfont.eot
 	echo "done"
 
 	printf "Building complete EOT fonts... "
 	cd $(FOLDER_TEMP); \
-	ttf2eot hack-regular-webfont.ttf    hack-regular-webfont.eot; \
-	ttf2eot hack-italic-webfont.ttf     hack-italic-webfont.eot; \
-	ttf2eot hack-bold-webfont.ttf       hack-bold-webfont.eot; \
-	ttf2eot hack-bolditalic-webfont.ttf hack-bolditalic-webfont.eot
+	java -jar $(FOLDER_TOOLS)sfnttool.jar -e -x hack-regular-webfont.ttf    hack-regular-webfont.eot; \
+	java -jar $(FOLDER_TOOLS)sfnttool.jar -e -x hack-italic-webfont.ttf     hack-italic-webfont.eot; \
+	java -jar $(FOLDER_TOOLS)sfnttool.jar -e -x hack-bold-webfont.ttf       hack-bold-webfont.eot; \
+	java -jar $(FOLDER_TOOLS)sfnttool.jar -e -x hack-bolditalic-webfont.ttf hack-bolditalic-webfont.eot
 	echo "done"
 
 # build WOFF
@@ -197,13 +231,13 @@ hinting_ttf:
 	printf "Hinting TTF font Regular... "; \
 	ttfautohint -l 4 -r 80 -G 350 -x 0 -H 181 -D latn -f latn -w G -W -t -X "" -I -m $(FOLDER_PREBUILD)Hack-Regular/ttfautohint.txt Hack-Regular.ttf hinted/Hack-Regular.ttf; \
 	echo "done"; \
-	printf "Hinting OTF font Italic... "; \
+	printf "Hinting TTF font Italic... "; \
 	ttfautohint -l 4 -r 80 -G 350 -x 0 -H 145 -D latn -f latn -w G -W -t -X "" -I -m $(FOLDER_PREBUILD)Hack-Italic/ttfautohint.txt Hack-Italic.ttf hinted/Hack-Italic.ttf; \
 	echo "done"; \
-	printf "Hinting OTF font Bold... "; \
+	printf "Hinting TTF font Bold... "; \
 	ttfautohint -l 4 -r 80 -G 350 -x 0 -H 260 -D latn -f latn -w G -W -t -X "" -I -m $(FOLDER_PREBUILD)Hack-Bold/ttfautohint.txt Hack-Bold.ttf hinted/Hack-Bold.ttf; \
 	echo "done"; \
-	printf "Hinting OTF font BoldItalic... "; \
+	printf "Hinting TTF font BoldItalic... "; \
 	ttfautohint -l 4 -r 80 -G 350 -x 0 -H 265 -D latn -f latn -w G -W -t -X "" -I -m $(FOLDER_PREBUILD)Hack-BoldItalic/ttfautohint.txt Hack-BoldItalic.ttf hinted/Hack-BoldItalic.ttf; \
 	echo "done"; \
 	printf "Overwriting unhinted fonts with hinted ones... "; \
