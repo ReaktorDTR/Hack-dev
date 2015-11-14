@@ -4,10 +4,83 @@
   <unicode hex="007C"/>
   <outline>
     <contour>
-      <point x="502" y="1565" type="line" name="dh01"/>
-      <point x="729" y="1565" type="line" name="dh02"/>
-      <point x="729" y="-483" type="line" name="av01"/>
-      <point x="502" y="-483" type="line"/>
+      <point x="536" y="713" type="line"/>
+      <point x="701" y="1565" type="line" name="dh01"/>
+      <point x="928" y="1565" type="line" name="dh02"/>
+      <point x="763" y="713" type="line"/>
+    </contour>
+    <contour>
+      <point x="696" y="369" type="line"/>
+      <point x="530" y="-483" type="line" name="av01"/>
+      <point x="303" y="-483" type="line"/>
+      <point x="469" y="370" type="line"/>
     </contour>
   </outline>
+  <lib>
+    <dict>
+      <key>com.typemytype.robofont.guides</key>
+      <array>
+        <dict>
+          <key>angle</key>
+          <integer>0</integer>
+          <key>isGlobal</key>
+          <false/>
+          <key>x</key>
+          <integer>-117</integer>
+          <key>y</key>
+          <integer>713</integer>
+        </dict>
+        <dict>
+          <key>angle</key>
+          <integer>0</integer>
+          <key>isGlobal</key>
+          <false/>
+          <key>x</key>
+          <integer>-140</integer>
+          <key>y</key>
+          <integer>369</integer>
+        </dict>
+        <dict>
+          <key>angle</key>
+          <integer>90</integer>
+          <key>isGlobal</key>
+          <false/>
+          <key>x</key>
+          <integer>536</integer>
+          <key>y</key>
+          <integer>575</integer>
+        </dict>
+        <dict>
+          <key>angle</key>
+          <integer>90</integer>
+          <key>isGlobal</key>
+          <false/>
+          <key>x</key>
+          <integer>469</integer>
+          <key>y</key>
+          <integer>486</integer>
+        </dict>
+        <dict>
+          <key>angle</key>
+          <integer>90</integer>
+          <key>isGlobal</key>
+          <false/>
+          <key>x</key>
+          <integer>763</integer>
+          <key>y</key>
+          <integer>574</integer>
+        </dict>
+        <dict>
+          <key>angle</key>
+          <integer>90</integer>
+          <key>isGlobal</key>
+          <false/>
+          <key>x</key>
+          <integer>696</integer>
+          <key>y</key>
+          <integer>487</integer>
+        </dict>
+      </array>
+    </dict>
+  </lib>
 </glyph>

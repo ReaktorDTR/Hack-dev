@@ -258,19 +258,6 @@
 	<string>1D3C1962-A1A3-4C8A-91ED-EB63FDB6DFAC</string>
 	<key>com.schriftgestaltung.useNiceNames</key>
 	<integer>0</integer>
-	<key>com.typemytype.robofont.guides</key>
-	<array>
-		<dict>
-			<key>angle</key>
-			<integer>0</integer>
-			<key>isGlobal</key>
-			<true/>
-			<key>x</key>
-			<integer>0</integer>
-			<key>y</key>
-			<integer>1963</integer>
-		</dict>
-	</array>
 	<key>public.glyphOrder</key>
 	<array>
 		<string>.notdef</string>

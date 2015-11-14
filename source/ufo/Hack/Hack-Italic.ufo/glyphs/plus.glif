@@ -4,18 +4,18 @@
   <unicode hex="002B"/>
   <outline>
     <contour>
-      <point x="532" y="557" type="line" name="dh01"/>
-      <point x="88" y="557" type="line"/>
-      <point x="88" y="727" type="line"/>
-      <point x="532" y="727" type="line" name="sh01"/>
-      <point x="532" y="1171" type="line" name="av02"/>
-      <point x="700" y="1171" type="line" name="sh02"/>
-      <point x="700" y="727" type="line" name="sv01"/>
-      <point x="1145" y="727" type="line"/>
-      <point x="1145" y="557" type="line" name="sv02"/>
-      <point x="700" y="557" type="line" name="dh02"/>
-      <point x="700" y="113" type="line" name="av01"/>
-      <point x="532" y="113" type="line"/>
+      <point x="515" y="557" type="line" name="dh01"/>
+      <point x="71" y="557" type="line"/>
+      <point x="105" y="727" type="line"/>
+      <point x="549" y="727" type="line" name="sh01"/>
+      <point x="635" y="1171" type="line" name="av02"/>
+      <point x="803" y="1171" type="line" name="sh02"/>
+      <point x="717" y="727" type="line" name="sv01"/>
+      <point x="1162" y="727" type="line"/>
+      <point x="1128" y="557" type="line" name="sv02"/>
+      <point x="683" y="557" type="line" name="dh02"/>
+      <point x="597" y="113" type="line" name="av01"/>
+      <point x="429" y="113" type="line"/>
     </contour>
   </outline>
 </glyph>
