@@ -2,6 +2,13 @@ ifndef VERBOSE
 .SILENT:
 endif
 
+ifdef RELEASE
+FONT_NAME=Hack
+endif
+ifndef RELEASE
+FONT_NAME=Hack-dev
+endif
+
 FOLDER_ROOT=$(shell pwd)/
 FOLDER_SOURCE=$(FOLDER_ROOT)source/ufo/Hack/
 FOLDER_BUILD=$(FOLDER_ROOT)build/
@@ -33,7 +40,7 @@ version: version_set
 webfonts: check_webfonts make_temp build_otf build_ttf build_subsets build_svg build_eot build_woff build_woff2 copy_webfonts update_css cleanup
 
 # build chains
-build_otf: check_tools_otf build_otf_setversion build_otf_run hinting_otf
+build_otf: check_tools_otf build_otf_copy_ufo build_otf_setversion build_otf_run hinting_otf
 build_ttf: check_tools_ttf build_ttf_run hinting_ttf
 build_subsets: check_tools_subsetting build_subset_latin1
 build_svg: check_tools_svg build_svg_run
@@ -61,7 +68,8 @@ cleanup:
 	printf "Cleaning up... "
 	rm -f $(FOLDER_SOURCE)current.fpr
 	rm -rf $(FOLDER_TEMP)
-	rm -f $(FOLDER_PREBUILD)/*/*_versioned.fea
+	rm -f $(FOLDER_PREBUILD)/*/features.fea
+	rm -f $(FOLDER_PREBUILD)/*/FontMenuNameDB
 	echo "done"
 
 # check if all tools required for build are available
@@ -108,56 +116,83 @@ check_tool_woff2:
 	command -v woff2_compress >/dev/null 2>&1 || { echo "no\n\nPlease install woff2.\n" >&2; exit 1; }
 	echo "yes"
 
+# copy UFO sources
+build_otf_copy_ufo:
+	printf "Copying UFO sources... "
+	cd $(FOLDER_TEMP); \
+	cp -R $(FOLDER_SOURCE)Hack-Regular.ufo .; \
+	cp -R $(FOLDER_SOURCE)Hack-Italic.ufo .; \
+	cp -R $(FOLDER_SOURCE)Hack-Bold.ufo .; \
+	cp -R $(FOLDER_SOURCE)Hack-BoldItalic.ufo .; \
+	mv Hack-Regular.ufo $(FONT_NAME)-Regular.ufo; \
+	mv Hack-Italic.ufo $(FONT_NAME)-Italic.ufo; \
+	mv Hack-Bold.ufo $(FONT_NAME)-Bold.ufo; \
+	mv Hack-BoldItalic.ufo $(FONT_NAME)-BoldItalic.ufo
+	echo "done"
+
+
 # add version info to OTF feature files
 build_otf_setversion:
 	[ -r $(FILE_VERSION) ] || { echo "Version is undefined. Call make version 1.234 first.\n"; exit 2; }
 	printf "Preparing versioned OTF feature files... "
 	VERSION_CURRENT=`cat $(FILE_VERSION)`; \
 	cd $(FOLDER_PREBUILD); \
-	cp Hack-Regular/features.fea    Hack-Regular/features_versioned.fea; \
-	cp Hack-Italic/features.fea     Hack-Italic/features_versioned.fea; \
-	cp Hack-Bold/features.fea       Hack-Bold/features_versioned.fea; \
-	cp Hack-BoldItalic/features.fea Hack-BoldItalic/features_versioned.fea; \
-	find . -type f -name "features_versioned.fea" -exec sed -i.bak s/xVERSIONx/$$VERSION_CURRENT/g {} +; \
-	rm -f */features_versioned.fea.bak
+	cp Hack-Regular/features.fea.template    Hack-Regular/features.fea; \
+	cp Hack-Italic/features.fea.template     Hack-Italic/features.fea; \
+	cp Hack-Bold/features.fea.template       Hack-Bold/features.fea; \
+	cp Hack-BoldItalic/features.fea.template Hack-BoldItalic/features.fea; \
+	find . -type f -name "features.fea" -exec sed -i.bak s/xVERSIONx/$$VERSION_CURRENT/g {} +; \
+	find . -type f -name "features.fea" -exec sed -i.bak s/xFONT_NAMEx/$(FONT_NAME)/g {} +; \
+	rm -f */features.fea.bak; \
+	cp Hack-Regular/FontMenuNameDB.template    Hack-Regular/FontMenuNameDB; \
+	cp Hack-Italic/FontMenuNameDB.template     Hack-Italic/FontMenuNameDB; \
+	cp Hack-Bold/FontMenuNameDB.template       Hack-Bold/FontMenuNameDB; \
+	cp Hack-BoldItalic/FontMenuNameDB.template Hack-BoldItalic/FontMenuNameDB; \
+	find . -type f -name "FontMenuNameDB" -exec sed -i.bak s/xFONT_NAMEx/$(FONT_NAME)/g {} +; \
+	rm -f */FontMenuNameDB.bak
+	cd $(FOLDER_TEMP); \
+	find . -type f -name "fontinfo.plist" -exec sed -i.bak s/\>Hack-/\>$(FONT_NAME)-/g {} +; \
+	find . -type f -name "fontinfo.plist" -exec sed -i.bak s/\>Hack\</\>$(FONT_NAME)\</g {} +; \
+	find . -type f -name "fontinfo.plist" -exec sed -i.bak s/\>Hack\ /\>$(FONT_NAME)\ /g {} +; \
+	rm -f */*/fontinfo.plist.bak; \
 	echo "done"
 
 # build OTF from UFO using MakeOTF and the tables
 build_otf_run:
 	printf "Building OTF font Regular... "
 	cd $(FOLDER_PREBUILD)Hack-Regular; \
-	makeotf -f $(FOLDER_SOURCE)Hack-Regular.ufo -o $(FOLDER_TEMP)Hack-Regular.otf -mf FontMenuNameDB -ff features_versioned.fea -osbOn 6 -fs -ga -gf GlyphOrderAndAliasDB -r
+	makeotf -f $(FOLDER_TEMP)$(FONT_NAME)-Regular.ufo -o $(FOLDER_TEMP)$(FONT_NAME)-Regular.otf -mf FontMenuNameDB -ff features.fea -osbOn 6 -fs -ga -gf GlyphOrderAndAliasDB -r
 	echo "done"
 
 	printf "Building OTF font Italic... "
 	cd $(FOLDER_PREBUILD)Hack-Italic; \
-	makeotf -f $(FOLDER_SOURCE)Hack-Italic.ufo -o $(FOLDER_TEMP)Hack-Italic.otf -mf FontMenuNameDB -ff features_versioned.fea -i -osbOn 6 -fs -ga -gf GlyphOrderAndAliasDB -r
+	makeotf -f $(FOLDER_TEMP)$(FONT_NAME)-Italic.ufo -o $(FOLDER_TEMP)$(FONT_NAME)-Italic.otf -mf FontMenuNameDB -ff features.fea -i -osbOn 6 -fs -ga -gf GlyphOrderAndAliasDB -r
 	echo "done"
 
 	printf "Building OTF font Bold... "
 	cd $(FOLDER_PREBUILD)Hack-Bold; \
-	makeotf -f $(FOLDER_SOURCE)Hack-Bold.ufo -o $(FOLDER_TEMP)Hack-Bold.otf -mf FontMenuNameDB -ff features_versioned.fea -b -osbOn 6 -fs -ga -gf GlyphOrderAndAliasDB -r
+	makeotf -f $(FOLDER_TEMP)$(FONT_NAME)-Bold.ufo -o $(FOLDER_TEMP)$(FONT_NAME)-Bold.otf -mf FontMenuNameDB -ff features.fea -b -osbOn 6 -fs -ga -gf GlyphOrderAndAliasDB -r
 	echo "done"
 
 	printf "Building OTF font BoldItalic... "
 	cd $(FOLDER_PREBUILD)Hack-BoldItalic; \
-	makeotf -f $(FOLDER_SOURCE)Hack-BoldItalic.ufo -o $(FOLDER_TEMP)Hack-BoldItalic.otf -mf FontMenuNameDB -ff features_versioned.fea -b -i -osbOn 6 -fs -ga -gf GlyphOrderAndAliasDB -r
+	makeotf -f $(FOLDER_TEMP)$(FONT_NAME)-BoldItalic.ufo -o $(FOLDER_TEMP)$(FONT_NAME)-BoldItalic.otf -mf FontMenuNameDB -ff features.fea -b -i -osbOn 6 -fs -ga -gf GlyphOrderAndAliasDB -r
 	echo "done"
 
 # build TTF from OTF using FontForge Python scripting
 build_ttf_run:
 	cd $(FOLDER_TEMP); \
 	printf "Building TTF font Regular... "; \
-	fontforge -c "f = open('Hack-Regular.otf'); f.generate('Hack-Regular.ttf'); quit();" \
+	fontforge -c "f = open('$(FONT_NAME)-Regular.otf'); f.generate('$(FONT_NAME)-Regular.ttf'); quit();" \
 	echo "done"; \
 	printf "Building TTF font Italic... "; \
-	fontforge -c "f = open('Hack-Italic.otf'); f.generate('Hack-Italic.ttf'); quit();" \
+	fontforge -c "f = open('$(FONT_NAME)-Italic.otf'); f.generate('$(FONT_NAME)-Italic.ttf'); quit();" \
 	echo "done"; \
 	printf "Building TTF font Bold... "; \
-	fontforge -c "f = open('Hack-Bold.otf'); f.generate('Hack-Bold.ttf'); quit();" \
+	fontforge -c "f = open('$(FONT_NAME)-Bold.otf'); f.generate('$(FONT_NAME)-Bold.ttf'); quit();" \
 	echo "done"; \
 	printf "Building TTF font BoldItalic... "; \
-	fontforge -c "f = open('Hack-BoldItalic.otf'); f.generate('Hack-BoldItalic.ttf'); quit();"; \
+	fontforge -c "f = open('$(FONT_NAME)-BoldItalic.otf'); f.generate('$(FONT_NAME)-BoldItalic.ttf'); quit();"; \
 	echo "done"
 
 build_subsets: build_subset_latin1
@@ -166,16 +201,16 @@ build_subsets: build_subset_latin1
 build_subset_latin1:
 	cd $(FOLDER_TEMP); \
 	printf "Subsetting TTF font Regular to Latin1... "; \
-	pyftsubset Hack-Regular.ttf --unicodes=41-5a,61-7a \
+	pyftsubset $(FONT_NAME)-Regular.ttf --unicodes=41-5a,61-7a \
 	echo "done"; \
 	printf "Subsetting TTF font Italic to Latin1... "; \
-	pyftsubset Hack-Italic.ttf --unicodes=41-5a,61-7a \
+	pyftsubset $(FONT_NAME)-Italic.ttf --unicodes=41-5a,61-7a \
 	echo "done"; \
 	printf "Subsetting TTF font Bold to Latin1... "; \
-	pyftsubset Hack-Bold.ttf --unicodes=41-5a,61-7a \
+	pyftsubset $(FONT_NAME)-Bold.ttf --unicodes=41-5a,61-7a \
 	echo "done"; \
 	printf "Subsetting TTF font BoldItalic to Latin1... "; \
-	pyftsubset Hack-BoldItalic.ttf --unicodes=41-5a,61-7a \
+	pyftsubset $(FONT_NAME)-BoldItalic.ttf --unicodes=41-5a,61-7a \
 	echo "done"
 
 # build SVG
@@ -212,16 +247,16 @@ build_woff2_run:
 hinting_otf:
 	cd $(FOLDER_TEMP); \
 	printf "Hinting OTF font Regular... "; \
-	autohint Hack-Regular.otf; \
+	autohint $(FONT_NAME)-Regular.otf; \
 	echo "done"; \
 	printf "Hinting OTF font Italic... "; \
-	autohint Hack-Italic.otf; \
+	autohint $(FONT_NAME)-Italic.otf; \
 	echo "done"; \
 	printf "Hinting OTF font Bold... "; \
-	autohint Hack-Bold.otf; \
+	autohint $(FONT_NAME)-Bold.otf; \
 	echo "done"; \
 	printf "Hinting OTF font BoldItalic... "; \
-	autohint Hack-BoldItalic.otf; \
+	autohint $(FONT_NAME)-BoldItalic.otf; \
 	echo "done"
 
 # hint TTF using ttfautohint and our hint files
@@ -229,16 +264,16 @@ hinting_ttf:
 	cd $(FOLDER_TEMP); \
 	mkdir hinted; \
 	printf "Hinting TTF font Regular... "; \
-	ttfautohint -l 4 -r 80 -G 350 -x 0 -H 181 -D latn -f latn -w G -W -t -X "" -I -m $(FOLDER_PREBUILD)Hack-Regular/ttfautohint.txt Hack-Regular.ttf hinted/Hack-Regular.ttf; \
+	ttfautohint -l 4 -r 80 -G 350 -x 0 -H 181 -D latn -f latn -w G -W -t -X "" -I -m $(FOLDER_PREBUILD)Hack-Regular/ttfautohint.txt $(FONT_NAME)-Regular.ttf hinted/$(FONT_NAME)-Regular.ttf; \
 	echo "done"; \
 	printf "Hinting TTF font Italic... "; \
-	ttfautohint -l 4 -r 80 -G 350 -x 0 -H 145 -D latn -f latn -w G -W -t -X "" -I -m $(FOLDER_PREBUILD)Hack-Italic/ttfautohint.txt Hack-Italic.ttf hinted/Hack-Italic.ttf; \
+	ttfautohint -l 4 -r 80 -G 350 -x 0 -H 145 -D latn -f latn -w G -W -t -X "" -I -m $(FOLDER_PREBUILD)Hack-Italic/ttfautohint.txt $(FONT_NAME)-Italic.ttf hinted/$(FONT_NAME)-Italic.ttf; \
 	echo "done"; \
 	printf "Hinting TTF font Bold... "; \
-	ttfautohint -l 4 -r 80 -G 350 -x 0 -H 260 -D latn -f latn -w G -W -t -X "" -I -m $(FOLDER_PREBUILD)Hack-Bold/ttfautohint.txt Hack-Bold.ttf hinted/Hack-Bold.ttf; \
+	ttfautohint -l 4 -r 80 -G 350 -x 0 -H 260 -D latn -f latn -w G -W -t -X "" -I -m $(FOLDER_PREBUILD)Hack-Bold/ttfautohint.txt $(FONT_NAME)-Bold.ttf hinted/$(FONT_NAME)-Bold.ttf; \
 	echo "done"; \
 	printf "Hinting TTF font BoldItalic... "; \
-	ttfautohint -l 4 -r 80 -G 350 -x 0 -H 265 -D latn -f latn -w G -W -t -X "" -I -m $(FOLDER_PREBUILD)Hack-BoldItalic/ttfautohint.txt Hack-BoldItalic.ttf hinted/Hack-BoldItalic.ttf; \
+	ttfautohint -l 4 -r 80 -G 350 -x 0 -H 265 -D latn -f latn -w G -W -t -X "" -I -m $(FOLDER_PREBUILD)Hack-BoldItalic/ttfautohint.txt $(FONT_NAME)-BoldItalic.ttf hinted/$(FONT_NAME)-BoldItalic.ttf; \
 	echo "done"; \
 	printf "Overwriting unhinted fonts with hinted ones... "; \
 	mv hinted/*.ttf .; \

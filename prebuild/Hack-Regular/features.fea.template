@@ -25,11 +25,12 @@ table head {
 table name {
 	nameid 0 1 "Copyright (c) 2015 Christopher Simpkins / Copyright (c) 2003 by Bitstream, Inc. All Rights Reserved.";
 	nameid 0 3 1 1033 "Copyright (c) 2015 Christopher Simpkins / Copyright (c) 2003 by Bitstream, Inc. All Rights Reserved.";
-	nameid 1 1 "Hack";
-	nameid 1 3 1 1033 "Hack";
+	nameid 1 1 "xFONT_NAMEx";
+	nameid 1 3 1 1033 "xFONT_NAMEx";
 	nameid 2 1 "Regular";
 	nameid 2 3 1 1033 "Regular";
-	nameid 4 3 1 1033 "Hack-Regular";
+	nameid 4 1 "xFONT_NAMEx-Regular";
+	nameid 4 3 1 1033 "xFONT_NAMEx-Regular";
 	nameid 5 1 "Version xVERSIONx";
 	nameid 5 3 1 1033 "Version xVERSIONx";
 	nameid 8 1 "Christopher Simpkins";
