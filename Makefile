@@ -120,14 +120,10 @@ check_tool_woff2:
 build_otf_copy_ufo:
 	printf "Copying UFO sources... "
 	cd $(FOLDER_TEMP); \
-	cp -R $(FOLDER_SOURCE)Hack-Regular.ufo .; \
-	cp -R $(FOLDER_SOURCE)Hack-Italic.ufo .; \
-	cp -R $(FOLDER_SOURCE)Hack-Bold.ufo .; \
-	cp -R $(FOLDER_SOURCE)Hack-BoldItalic.ufo .; \
-	mv Hack-Regular.ufo $(FONT_NAME)-Regular.ufo; \
-	mv Hack-Italic.ufo $(FONT_NAME)-Italic.ufo; \
-	mv Hack-Bold.ufo $(FONT_NAME)-Bold.ufo; \
-	mv Hack-BoldItalic.ufo $(FONT_NAME)-BoldItalic.ufo
+	cp -R $(FOLDER_SOURCE)Hack-Regular.ufo    ./$(FONT_NAME)-Regular.ufo; \
+	cp -R $(FOLDER_SOURCE)Hack-Italic.ufo     ./$(FONT_NAME)-Italic.ufo; \
+	cp -R $(FOLDER_SOURCE)Hack-Bold.ufo       ./$(FONT_NAME)-Bold.ufo; \
+	cp -R $(FOLDER_SOURCE)Hack-BoldItalic.ufo ./$(FONT_NAME)-BoldItalic.ufo
 	echo "done"
 
 
