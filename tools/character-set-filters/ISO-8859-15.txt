@@ -166,7 +166,6 @@ ccedilla
 egrave
 eacute
 ecircumflex
-etilde
 edieresis
 igrave
 iacute
