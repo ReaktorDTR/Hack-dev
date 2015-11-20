@@ -4,16 +4,16 @@
   <unicode hex="007C"/>
   <outline>
     <contour>
-      <point x="564" y="713" type="line"/>
-      <point x="729" y="1565" type="line" name="dh01"/>
-      <point x="901" y="1565" type="line" name="dh02"/>
-      <point x="736" y="713" type="line"/>
+      <point x="547" y="627" type="line"/>
+      <point x="729" y="1565" type="line"/>
+      <point x="901" y="1565" type="line"/>
+      <point x="719" y="627" type="line"/>
     </contour>
     <contour>
-      <point x="669" y="369" type="line"/>
-      <point x="503" y="-483" type="line" name="av01"/>
+      <point x="685" y="455" type="line"/>
+      <point x="503" y="-483" type="line"/>
       <point x="331" y="-483" type="line"/>
-      <point x="496" y="369" type="line"/>
+      <point x="513" y="455" type="line"/>
     </contour>
   </outline>
   <lib>
@@ -28,7 +28,7 @@
           <key>x</key>
           <integer>-193</integer>
           <key>y</key>
-          <integer>713</integer>
+          <integer>627</integer>
         </dict>
         <dict>
           <key>angle</key>
@@ -38,7 +38,7 @@
           <key>x</key>
           <integer>-229</integer>
           <key>y</key>
-          <integer>369</integer>
+          <integer>455</integer>
         </dict>
         <dict>
           <key>angle</key>
@@ -46,7 +46,7 @@
           <key>isGlobal</key>
           <false/>
           <key>x</key>
-          <integer>564</integer>
+          <integer>547</integer>
           <key>y</key>
           <integer>531</integer>
         </dict>
@@ -56,9 +56,9 @@
           <key>isGlobal</key>
           <false/>
           <key>x</key>
-          <integer>496</integer>
+          <integer>513</integer>
           <key>y</key>
-          <integer>549</integer>
+          <integer>546</integer>
         </dict>
         <dict>
           <key>angle</key>
@@ -66,9 +66,9 @@
           <key>isGlobal</key>
           <false/>
           <key>x</key>
-          <integer>736</integer>
+          <integer>719</integer>
           <key>y</key>
-          <integer>531</integer>
+          <integer>529</integer>
         </dict>
         <dict>
           <key>angle</key>
@@ -76,9 +76,9 @@
           <key>isGlobal</key>
           <false/>
           <key>x</key>
-          <integer>669</integer>
+          <integer>685</integer>
           <key>y</key>
-          <integer>555</integer>
+          <integer>554</integer>
         </dict>
       </array>
     </dict>
